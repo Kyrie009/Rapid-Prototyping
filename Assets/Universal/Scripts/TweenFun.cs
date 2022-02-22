@@ -40,7 +40,7 @@ public class TweenFun : JMC
 
     void ChangeColor()
     {
-        player.GetComponent<Renderer>().material.DOColor(GetRandomColor(), tweenTime);
+        //player.GetComponent<Renderer>().material.DOColor(GetRandomColor(), tweenTime);
     }
 
     void ShakeCamera()
