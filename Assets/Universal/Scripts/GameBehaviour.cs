@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameBehaviour : JMC
 {
-    
+    protected static Prototype1.UIManager _UI { get { return Prototype1.UIManager.INSTANCE; } }
 }
 
 public class GameBehaviour<T> : GameBehaviour where T : GameBehaviour
