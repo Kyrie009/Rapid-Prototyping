@@ -4,12 +4,13 @@ using UnityEngine;
 
 namespace Prototype1
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : GameBehaviour
     {
         private Vector3 offset;
         public bool hasPowerup;
-        private float powerupstrength = 30;
+        private float powerupstrength = 20;
         public float speed;
+        public float forwardInput;
 
         public GameObject powerupIndicator;
         private Rigidbody playerRb;
@@ -22,15 +23,25 @@ namespace Prototype1
             offset = powerupIndicator.transform.position - transform.position;
         }
 
-        // Update is called once per frame
         void Update()
         {
-            float forwardInput = Input.GetAxis("Vertical");
-            playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
+            if(_UI.uiNavigation.isOn == false)
+            {
+                //input
+                forwardInput = Input.GetAxis("Vertical");
+                playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
+            }         
             //power up indicator position
             powerupIndicator.transform.position = transform.position + offset;
-            
+
+            //GameOver if you fall off
+            if (transform.position.y < -10)
+            {
+                _UI.uiNavigation.ToggleGameOver(true);
+                _UI.scoring.GameOver();
+            }
         }
+
 
         private void OnTriggerEnter(Collider other)
         {
@@ -59,10 +70,8 @@ namespace Prototype1
                 Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
                 Vector3 awayfromPlayer = (collision.gameObject.transform.position - transform.position);
                 enemyRigidbody.AddForce(awayfromPlayer * powerupstrength, ForceMode.Impulse);
-                Debug.Log(collision.gameObject.name);
+                //Debug.Log(collision.gameObject.name);
             }
-
-            
 
         }
     }

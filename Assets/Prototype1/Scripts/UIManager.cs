@@ -10,7 +10,15 @@ namespace Prototype1
         public TMP_Text scoreText;
         public TMP_Text bestTimeText;
         public TMP_Text currentTimeText;
+        public UINavigation uiNavigation;
+        public Scoring scoring;
 
+        private void Start()
+        {
+            //initialise references
+            uiNavigation = FindObjectOfType<UINavigation>();
+            scoring = FindObjectOfType<Scoring>();
+        }
         public void UpdateScore(int _score)
         {
             scoreText.text = "Score: " + _score; 
@@ -21,12 +29,12 @@ namespace Prototype1
             currentTimeText.text = "Current time: " + _time.ToString("F3");
         }
 
-        public void UpdateBestTime(float _time, bool _firstTime = false)
+        public void UpdateBestTime(float _time, bool _firstTime)
         {
             if (_firstTime)
-                bestTimeText.text = "Best time: 0";
+                bestTimeText.text = "0.00";
             else
-                bestTimeText.text = "Best time: " + _time.ToString("F3");
+                bestTimeText.text = _time.ToString("F3");
 
         }
     }
