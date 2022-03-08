@@ -55,7 +55,7 @@ namespace Prototype1
             CheckIfOn(_toggle);
         }
 
-        public void ReloadScene(string _scene)
+        public void LoadScene(string _scene)
         {
             SceneManager.LoadScene(_scene);
         }  

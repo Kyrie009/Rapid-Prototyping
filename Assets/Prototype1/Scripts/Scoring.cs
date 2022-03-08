@@ -7,6 +7,7 @@ namespace Prototype1
     public class Scoring : GameBehaviour
     {
         public int score;
+        float noTime = 0;
         public float bestTime;
         public float currentTime;
         Timer timer;
@@ -70,6 +71,7 @@ namespace Prototype1
         public void ResetSaveData()
         {
             PlayerPrefs.DeleteKey("BestTime");
+            bestTime = noTime;
             Setup();
         }
 
