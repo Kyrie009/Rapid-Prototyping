@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.1/staging' branch; Version is '2021.1.12f1 (afcadd793de6) revision 11520733'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19044.1566; Version 2009; 64bit' Language: 'en' Physical Memory: 16281 MB
+OS: 'Windows 10 Home; OS build 19044.1586; Version 2009; 64bit' Language: 'en' Physical Memory: 16281 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ C:/Users/Kyrie/Desktop/GitRepos/Rapid-Prototyping
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50965
+62506
 Successfully changed project path to: C:/Users/Kyrie/Desktop/GitRepos/Rapid-Prototyping
 C:/Users/Kyrie/Desktop/GitRepos/Rapid-Prototyping
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 18.28 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 19.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.12f1 (afcadd793de6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/Resources/UnitySubsystems
@@ -35,20 +35,20 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56524
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56160
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001639 seconds.
+Registered in 0.001686 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 17.78 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 19.05 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.056 seconds
+- Completed reload, in  1.025 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1056ms)
+	ReloadAssembly (1025ms)
 		BeginReloadAssembly (42ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
@@ -58,16 +58,16 @@ Domain Reload Profiling:
 		EndReloadAssembly (332ms)
 			LoadAssemblies (41ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (139ms)
+			SetupTypeCache (135ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (131ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (130ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (18ms)
+				RefreshPlugins (19ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (82ms)
+				ProcessInitializeOnLoadAttributes (80ms)
 				ProcessInitializeOnLoadMethodAttributes (24ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -75,34 +75,34 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001164 seconds.
+Registered in 0.001049 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.686 seconds
+- Completed reload, in  0.691 seconds
 Domain Reload Profiling:
-	ReloadAssembly (686ms)
-		BeginReloadAssembly (119ms)
+	ReloadAssembly (691ms)
+		BeginReloadAssembly (120ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (520ms)
-			LoadAssemblies (67ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (523ms)
+			LoadAssemblies (65ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (161ms)
+			SetupTypeCache (165ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (188ms)
+			SetupLoadedEditorAssemblies (189ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (33ms)
+				BeforeProcessingInitializeOnLoad (34ms)
 				ProcessInitializeOnLoadAttributes (141ms)
 				ProcessInitializeOnLoadMethodAttributes (4ms)
 				AfterProcessingInitializeOnLoad (5ms)
@@ -113,14 +113,14 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1074 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.2 MB.
-System memory in use after: 65.2 MB.
+Unloading 1188 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.3 MB.
+System memory in use after: 88.8 MB.
 
-Unloading 56 unused Assets to reduce memory usage. Loaded Objects now: 1533.
-Total: 1.567600 ms (FindLiveObjects: 0.093400 ms CreateObjectMapping: 0.032000 ms MarkObjects: 1.330000 ms  DeleteObjects: 0.111400 ms)
+Unloading 115 unused Assets to reduce memory usage. Loaded Objects now: 1583.
+Total: 6.587200 ms (FindLiveObjects: 0.192300 ms CreateObjectMapping: 0.081100 ms MarkObjects: 2.037900 ms  DeleteObjects: 4.274700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -134,17 +134,29 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Universal/Scripts/PauseController.cs
-  artifactKey: Guid(c5dd844c4d9ba7f4686adb36f0ba3339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Universal/Scripts/PauseController.cs using Guid(c5dd844c4d9ba7f4686adb36f0ba3339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb9854e7abc6ca3e1110ecc7cfe33f60') in 0.019437 seconds 
+  path: Assets/P05_Aki & Mika
+  artifactKey: Guid(c85f8ebdcc1d7684098daf87f6ab70fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/P05_Aki & Mika using Guid(c85f8ebdcc1d7684098daf87f6ab70fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6fc01375fb66d10b1b652c8831e6956') in 0.003591 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.803285 seconds.
+  path: Assets/Prototype2
+  artifactKey: Guid(cb9ccd40f5d12bc4f95ceecd6798b1c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2 using Guid(cb9ccd40f5d12bc4f95ceecd6798b1c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8da43b125356f12b44b10a42408c43c1') in 0.001285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.241399 seconds.
+  path: Assets/Prototype2/_Source_files
+  artifactKey: Guid(c32e6c4e2ef737743b75c460d9cd4c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files using Guid(c32e6c4e2ef737743b75c460d9cd4c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e5b039dff58909eff08efea6b64c070') in 0.001244 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001008 seconds.
+Registered in 0.001029 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -156,114 +168,42 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.622 seconds
+- Completed reload, in  0.626 seconds
 Domain Reload Profiling:
-	ReloadAssembly (622ms)
-		BeginReloadAssembly (89ms)
+	ReloadAssembly (626ms)
+		BeginReloadAssembly (90ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (18ms)
-		EndReloadAssembly (485ms)
-			LoadAssemblies (63ms)
+		EndReloadAssembly (484ms)
+			LoadAssemblies (65ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (170ms)
+			SetupTypeCache (165ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (150ms)
+			SetupLoadedEditorAssemblies (152ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (28ms)
+				BeforeProcessingInitializeOnLoad (29ms)
 				ProcessInitializeOnLoadAttributes (109ms)
 				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1030 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.7 MB.
-System memory in use after: 61.7 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1535.
-Total: 1.381500 ms (FindLiveObjects: 0.084000 ms CreateObjectMapping: 0.027600 ms MarkObjects: 1.229800 ms  DeleteObjects: 0.039600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 5.034305 seconds.
-  path: Assets/Universal/Scenes/Title.unity
-  artifactKey: Guid(df398b94d2f82d547aeec4faaca96f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Universal/Scenes/Title.unity using Guid(df398b94d2f82d547aeec4faaca96f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f36a44fb2e98cd5b1d2ed81d451417c') in 0.005309 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000982 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.612 seconds
-Domain Reload Profiling:
-	ReloadAssembly (613ms)
-		BeginReloadAssembly (87ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (479ms)
-			LoadAssemblies (62ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (156ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (148ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (28ms)
-				ProcessInitializeOnLoadAttributes (107ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1030 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.7 MB.
-System memory in use after: 61.7 MB.
+Unloading 1093 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.6 MB.
+System memory in use after: 79.9 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1537.
-Total: 1.387600 ms (FindLiveObjects: 0.079200 ms CreateObjectMapping: 0.026800 ms MarkObjects: 1.241800 ms  DeleteObjects: 0.039200 ms)
+Unloading 66 unused Assets to reduce memory usage. Loaded Objects now: 1585.
+Total: 5.517100 ms (FindLiveObjects: 0.122000 ms CreateObjectMapping: 0.032000 ms MarkObjects: 1.330600 ms  DeleteObjects: 4.031700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -278,11 +218,11 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000931 seconds.
+Registered in 0.001045 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -294,121 +234,7 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.634 seconds
-Domain Reload Profiling:
-	ReloadAssembly (635ms)
-		BeginReloadAssembly (95ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (21ms)
-		EndReloadAssembly (492ms)
-			LoadAssemblies (67ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (170ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (149ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (28ms)
-				ProcessInitializeOnLoadAttributes (108ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1030 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.7 MB.
-System memory in use after: 61.8 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1539.
-Total: 1.387100 ms (FindLiveObjects: 0.080200 ms CreateObjectMapping: 0.025800 ms MarkObjects: 1.243600 ms  DeleteObjects: 0.037000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 135.041568 seconds.
-  path: Assets/Prototype1/Scenes/Prototype1.unity
-  artifactKey: Guid(a4b96ad7a65484fd4a83cb97540eee50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prototype1/Scenes/Prototype1.unity using Guid(a4b96ad7a65484fd4a83cb97540eee50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '923326636a9153492db529a0e55ec842') in 0.006194 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 189.766809 seconds.
-  path: Assets/Universal/Scripts/SceneLoader.cs
-  artifactKey: Guid(c1aa743d975b6ad43bf23620787ef504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Universal/Scripts/SceneLoader.cs using Guid(c1aa743d975b6ad43bf23620787ef504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30ad3972daf939cad4d73c40a2e14460') in 0.001372 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 437.422368 seconds.
-  path: Assets/Prototype1/Resource
-  artifactKey: Guid(76d95ce92e6d1a64c8f53dbc69d92f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prototype1/Resource using Guid(76d95ce92e6d1a64c8f53dbc69d92f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a5b19bb47b071e90703b7d5dda985cd') in 0.001516 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.707527 seconds.
-  path: Assets/Universal/Resource/Konachan.com - 240365 frame_arms_girl gourai yang-do.jpg
-  artifactKey: Guid(779a81cf2e65fc54486d0c7894ac5af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Universal/Resource/Konachan.com - 240365 frame_arms_girl gourai yang-do.jpg using Guid(779a81cf2e65fc54486d0c7894ac5af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95628f595e6691de6fb375bbc7b34bdd') in 0.055237 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.306813 seconds.
-  path: Assets/Universal/Resource/thumb-1920-820201.png
-  artifactKey: Guid(e4e0b3785f216c84d841269217c69e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Universal/Resource/thumb-1920-820201.png using Guid(e4e0b3785f216c84d841269217c69e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29a9bee8f7d102b91548b5a0c43213c4') in 0.008311 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.218454 seconds.
-  path: Assets/Universal/Resource/thumb-1920-955383.jpg
-  artifactKey: Guid(37e9f3e59f6e0394fa6dbb8ea9c46fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Universal/Resource/thumb-1920-955383.jpg using Guid(37e9f3e59f6e0394fa6dbb8ea9c46fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7821418a5585c5ab106fccbfe53934a1') in 0.009864 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.320911 seconds.
-  path: Assets/Universal/Prefabs
-  artifactKey: Guid(b9161512e6ec113408c382774247d86e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Universal/Prefabs using Guid(b9161512e6ec113408c382774247d86e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41c0c1f54d36cea6587d2c606180c23a') in 0.001247 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 338.426898 seconds.
-  path: Assets/Prototype1/Scripts/Scoring.cs
-  artifactKey: Guid(0220789469abd3b4485023ab4b4f4530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prototype1/Scripts/Scoring.cs using Guid(0220789469abd3b4485023ab4b4f4530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5dd53ab8358e94d87683f24c56597ac') in 0.001307 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000975 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.630 seconds
+- Completed reload, in  0.629 seconds
 Domain Reload Profiling:
 	ReloadAssembly (630ms)
 		BeginReloadAssembly (91ms)
@@ -416,34 +242,34 @@ Domain Reload Profiling:
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (493ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (491ms)
 			LoadAssemblies (62ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (156ms)
+			SetupTypeCache (161ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (148ms)
+			SetupLoadedEditorAssemblies (161ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (28ms)
-				ProcessInitializeOnLoadAttributes (106ms)
+				BeforeProcessingInitializeOnLoad (30ms)
+				ProcessInitializeOnLoadAttributes (118ms)
 				ProcessInitializeOnLoadMethodAttributes (4ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1033 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 70.1 MB.
-System memory in use after: 70.1 MB.
+Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.9 MB.
+System memory in use after: 80.1 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1589.
-Total: 1.447700 ms (FindLiveObjects: 0.093300 ms CreateObjectMapping: 0.030700 ms MarkObjects: 1.278100 ms  DeleteObjects: 0.044900 ms)
+Unloading 66 unused Assets to reduce memory usage. Loaded Objects now: 1592.
+Total: 5.584900 ms (FindLiveObjects: 0.106000 ms CreateObjectMapping: 0.028800 ms MarkObjects: 1.287000 ms  DeleteObjects: 4.162300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -457,18 +283,42 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 87.794455 seconds.
-  path: Assets/Prototype1/Scripts/Scoring.cs
-  artifactKey: Guid(0220789469abd3b4485023ab4b4f4530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prototype1/Scripts/Scoring.cs using Guid(0220789469abd3b4485023ab4b4f4530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e30381037da802431bc3815eec563ea7') in 0.002659 seconds 
+  Time since last request: 28.752275 seconds.
+  path: Assets/Universal/Resource
+  artifactKey: Guid(76d95ce92e6d1a64c8f53dbc69d92f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Universal/Resource using Guid(76d95ce92e6d1a64c8f53dbc69d92f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f229accbb9994e912a090b704d69249') in 0.002699 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.571706 seconds.
+  path: Assets/Universal/_Source_Files
+  artifactKey: Guid(76d95ce92e6d1a64c8f53dbc69d92f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Universal/_Source_Files using Guid(76d95ce92e6d1a64c8f53dbc69d92f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6a2540f4a140c401432ff4f6bd2629c') in 0.001336 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.712632 seconds.
+  path: Assets/Universal/_Source_Files/Images
+  artifactKey: Guid(55b4f6bd4c65b9c478d904fb0d81fa14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Universal/_Source_Files/Images using Guid(55b4f6bd4c65b9c478d904fb0d81fa14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aaeb6662659fc912ce25613cd759de9') in 0.001409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.450763 seconds.
+  path: Assets/Universal/_Source_Files/7315388_p0 (2).jpg
+  artifactKey: Guid(ece7ace923f7c2d4fb5dd791545ae3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Universal/_Source_Files/7315388_p0 (2).jpg using Guid(ece7ace923f7c2d4fb5dd791545ae3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64bc511250b9ed2b9dcceea2050e313b') in 0.107589 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.154632 seconds.
+  path: Assets/Universal/_Source_Files/DynamicBone
+  artifactKey: Guid(dc4f90f2d8454754e912b724df4d4582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Universal/_Source_Files/DynamicBone using Guid(dc4f90f2d8454754e912b724df4d4582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76dd8e255c7f7283bcbef32349a62b2d') in 0.001356 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001330 seconds.
+Registered in 0.001030 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -480,42 +330,42 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.634 seconds
+- Completed reload, in  0.663 seconds
 Domain Reload Profiling:
-	ReloadAssembly (634ms)
-		BeginReloadAssembly (89ms)
+	ReloadAssembly (663ms)
+		BeginReloadAssembly (91ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (498ms)
-			LoadAssemblies (66ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (525ms)
+			LoadAssemblies (69ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (175ms)
+			SetupTypeCache (186ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (148ms)
+			SetupLoadedEditorAssemblies (154ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (28ms)
-				ProcessInitializeOnLoadAttributes (107ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
+				BeforeProcessingInitializeOnLoad (29ms)
+				ProcessInitializeOnLoadAttributes (110ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1030 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 70.0 MB.
-System memory in use after: 70.0 MB.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.5 MB.
+System memory in use after: 85.1 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1591.
-Total: 1.421100 ms (FindLiveObjects: 0.088600 ms CreateObjectMapping: 0.029600 ms MarkObjects: 1.260700 ms  DeleteObjects: 0.041700 ms)
+Unloading 66 unused Assets to reduce memory usage. Loaded Objects now: 1615.
+Total: 5.785600 ms (FindLiveObjects: 0.107100 ms CreateObjectMapping: 0.029400 ms MarkObjects: 1.328000 ms  DeleteObjects: 4.320400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -528,13 +378,223 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 11.030702 seconds.
+  path: Assets/Universal/Scenes/Title.unity
+  artifactKey: Guid(df398b94d2f82d547aeec4faaca96f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Universal/Scenes/Title.unity using Guid(df398b94d2f82d547aeec4faaca96f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a068e55203d6234cdb7aacf506303bfb') in 0.007860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 184.623995 seconds.
+  path: Assets/Prototype2/_Source_files/Fantasy Forest Environment Free Sample
+  artifactKey: Guid(2a6cfc91f8c87854c91989c41839a96d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/Fantasy Forest Environment Free Sample using Guid(2a6cfc91f8c87854c91989c41839a96d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acf9651117d78303b3765d0d759f6719') in 0.001405 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 40.015531 seconds.
+  path: Assets/Prototype2/_Source_files/Fantasy Skybox FREE
+  artifactKey: Guid(f95011ddbbf8ac54b8eeedfd010bd3b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/Fantasy Skybox FREE using Guid(f95011ddbbf8ac54b8eeedfd010bd3b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f29069eb0d44e7d20bae835ecb68ec') in 0.001276 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.340737 seconds.
+  path: Assets/Prototype2/_Source_files/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_02.png
+  artifactKey: Guid(88c467166db994146961f1ecc5fc214e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_02.png using Guid(88c467166db994146961f1ecc5fc214e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fcb086c9795d7e8b49441164459e236') in 0.054863 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.862734 seconds.
+  path: Assets/Prototype2/_Source_files/Fantasy Skybox FREE/Cubemaps
+  artifactKey: Guid(b40198e48fec1db4ba2bdbb96a9e1e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/Fantasy Skybox FREE/Cubemaps using Guid(b40198e48fec1db4ba2bdbb96a9e1e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '600b06a29982df4f8f28cae01d5c6c54') in 0.001436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.969298 seconds.
+  path: Assets/Prototype2/Scenes/Prototype2.unity
+  artifactKey: Guid(af73fe4cecc0a994ab9fe8fcb61209d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/Scenes/Prototype2.unity using Guid(af73fe4cecc0a994ab9fe8fcb61209d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '391e6c591043128ff020bb951b600767') in 0.001562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.231524 seconds.
+  path: Assets/Prototype2/_Source_files/Fantasy Forest Environment Free Sample/Scenes/demoScene_free.unity
+  artifactKey: Guid(7769f33fb4fa2e5458344a36556ad760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/Fantasy Forest Environment Free Sample/Scenes/demoScene_free.unity using Guid(7769f33fb4fa2e5458344a36556ad760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad8a28ebbca73aa73923fb5ead1b2f86') in 0.001605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.254023 seconds.
+  path: Assets/Prototype2/Scenes/Prototype2.unity
+  artifactKey: Guid(af73fe4cecc0a994ab9fe8fcb61209d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/Scenes/Prototype2.unity using Guid(af73fe4cecc0a994ab9fe8fcb61209d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31a4dd4f4a8d4896b9996ed352fc06bf') in 0.001627 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 153.050763 seconds.
+  path: Assets/Prototype2/_Source_files/Fantasy Forest Environment Free Sample/Scenes/assets.unity
+  artifactKey: Guid(a143ab047b99a124ca579bc8e0366cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/Fantasy Forest Environment Free Sample/Scenes/assets.unity using Guid(a143ab047b99a124ca579bc8e0366cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c021565b6164ef42f96ba9a04df2079') in 0.001690 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.695942 seconds.
+  path: Assets/Prototype2/_Source_files/Fantasy Forest Environment Free Sample/Scenes
+  artifactKey: Guid(62872d07d188c1c40b0a8f51ce5f5d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/Fantasy Forest Environment Free Sample/Scenes using Guid(62872d07d188c1c40b0a8f51ce5f5d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae0b3030ecc480e47a323a251f0002b0') in 0.001439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.824056 seconds.
+  path: Assets/Prototype2/_Source_files/Fantasy Forest Environment Free Sample/StandardNoCulling.shader
+  artifactKey: Guid(717bc8f73d5aea64caef02a0c07b1e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/Fantasy Forest Environment Free Sample/StandardNoCulling.shader using Guid(717bc8f73d5aea64caef02a0c07b1e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '805118b79a3bef199b1f86f9ea659b1c') in 0.005511 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.192399 seconds.
+  path: Assets/Prototype2/_Source_files/P05_Aki & Mika/DEMO_MagicaCloth.unity
+  artifactKey: Guid(2aa49aa1ea5b443409987fb2f39bddc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/P05_Aki & Mika/DEMO_MagicaCloth.unity using Guid(2aa49aa1ea5b443409987fb2f39bddc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5e267ecc969c22a5dbeaed4fda0f928') in 0.001676 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.134327 seconds.
+  path: Assets/Prototype2/_Source_files/P05_Aki & Mika/DEMO_Plain.unity
+  artifactKey: Guid(55794dc917a6c6940ae95aa93f159ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/P05_Aki & Mika/DEMO_Plain.unity using Guid(55794dc917a6c6940ae95aa93f159ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aba54f95fbb4f21c519499143eef32a') in 0.001694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.516546 seconds.
+  path: Assets/Prototype2/_Source_files/P05_Aki & Mika/DEMO_DynamicBone.unity
+  artifactKey: Guid(c43e9f21a2979954faeed40aaf50ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/P05_Aki & Mika/DEMO_DynamicBone.unity using Guid(c43e9f21a2979954faeed40aaf50ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dad6cca1233a1d2edfc69dbcffccfca0') in 0.001540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.904234 seconds.
+  path: Assets/Prototype2/_Source_files/P05_Aki & Mika/ReadMe.txt
+  artifactKey: Guid(8451d68122fd77942b07763b7e23bf10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/P05_Aki & Mika/ReadMe.txt using Guid(8451d68122fd77942b07763b7e23bf10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ae6af59de3c89409629e3f957a974eb') in 0.004357 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.748537 seconds.
+  path: Assets/Prototype2/Scenes/Prototype2.unity
+  artifactKey: Guid(af73fe4cecc0a994ab9fe8fcb61209d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/Scenes/Prototype2.unity using Guid(af73fe4cecc0a994ab9fe8fcb61209d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b78255baf87b6c42d1680fce2d602856') in 0.001530 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 75.277556 seconds.
+  path: Assets/Prototype2/_Source_files/P05_Aki & Mika/Prefab/Add_DynamicBone/P05_Aki_db.prefab
+  artifactKey: Guid(6d70351ec42dccf40bd34c82f13b4ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/P05_Aki & Mika/Prefab/Add_DynamicBone/P05_Aki_db.prefab using Guid(6d70351ec42dccf40bd34c82f13b4ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 237
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 237
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 214
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 214
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 214
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 243
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 214
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 243
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 217
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 217
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 217
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 247
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 217
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 247
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+ -> (artifact id: '6ca2987969d955b6bf32ba7ba69a514c') in 0.109626 seconds 
+========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000951 seconds.
+Registered in 0.001623 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -546,28 +606,262 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.604 seconds
+- Completed reload, in  1.127 seconds
 Domain Reload Profiling:
-	ReloadAssembly (604ms)
-		BeginReloadAssembly (86ms)
+	ReloadAssembly (1127ms)
+		BeginReloadAssembly (471ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (18ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (471ms)
-			LoadAssemblies (60ms)
+			CreateAndSetChildDomain (244ms)
+		EndReloadAssembly (566ms)
+			LoadAssemblies (138ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (153ms)
+			SetupTypeCache (209ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
+			RebuildScriptCaches (28ms)
 			SetupLoadedEditorAssemblies (150ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (29ms)
+				BeforeProcessingInitializeOnLoad (28ms)
 				ProcessInitializeOnLoadAttributes (108ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.9 MB.
+System memory in use after: 103.8 MB.
+
+Unloading 67 unused Assets to reduce memory usage. Loaded Objects now: 1664.
+Total: 5.765700 ms (FindLiveObjects: 0.107300 ms CreateObjectMapping: 0.029500 ms MarkObjects: 1.333200 ms  DeleteObjects: 4.295000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 172.569267 seconds.
+  path: Assets/Prototype2/_Source_files/P05_Aki & Mika/Prefab/Add_DynamicBone
+  artifactKey: Guid(97217145199a052478afdd6553cbc654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/P05_Aki & Mika/Prefab/Add_DynamicBone using Guid(97217145199a052478afdd6553cbc654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e37ca93144a9e7327c7394816f0f3f0') in 0.002829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.709067 seconds.
+  path: Assets/Prototype2/_Source_files/P05_Aki & Mika/Prefab/Add_DynamicBone/P05_Aki_ASTRO_db.prefab
+  artifactKey: Guid(9e13feb1f9d637443bb905ea0e3d9697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/P05_Aki & Mika/Prefab/Add_DynamicBone/P05_Aki_ASTRO_db.prefab using Guid(9e13feb1f9d637443bb905ea0e3d9697) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 237
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 237
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 237
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 207
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 237
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_OFF _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 214
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 243
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 214
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 243
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 214
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 243
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 214
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_DoubleShadeWithFeather_TransClipping': Couldn't open include file 'UCTS_DoubleShadeWithFeather.cginc'. at line 243
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_CLIPPING_TRANSMODE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 217
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 247
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 217
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 247
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 217
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 247
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 217
+
+Compiling Vertex program with DIRECTIONAL LIGHTPROBE_SH _EMISSIVE_SIMPLE _IS_PASS_FWDBASE _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDBASE
+Disabled keywords: _EMISSIVE_ANIMATION FOG_LINEAR FOG_EXP FOG_EXP2 SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN VERTEXLIGHT_ON UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'UnityChanToonShader/Toon_ShadingGradeMap_TransClipping': Couldn't open include file 'UCTS_ShadingGradeMap.cginc'. at line 247
+
+Compiling Vertex program with DIRECTIONAL _IS_PASS_FWDDELTA _IS_TRANSCLIPPING_ON _IS_ANGELRING_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_FORWARDADD
+Disabled keywords: FOG_LINEAR FOG_EXP FOG_EXP2 POINT SPOT POINT_COOKIE DIRECTIONAL_COOKIE SHADOWS_SHADOWMASK LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SCREEN SHADOWS_CUBE UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+ -> (artifact id: 'a55aaf10994dfb2a4a64526b3e5d41ed') in 0.164969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.842461 seconds.
+  path: Assets/Prototype2/_Source_files/P05_Aki & Mika/Toon/Shader/Toon_OutlineObject.shader
+  artifactKey: Guid(42a47eda2ed77084c9136507eadb8641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/P05_Aki & Mika/Toon/Shader/Toon_OutlineObject.shader using Guid(42a47eda2ed77084c9136507eadb8641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7841770ba82face4a4aa5a5e0536df4c') in 0.001734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 66.942381 seconds.
+  path: Assets/Prototype2/_Source_files/P05_Aki & Mika/Prefab
+  artifactKey: Guid(f925c13c4b35d8f4b99cc79a00aa9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype2/_Source_files/P05_Aki & Mika/Prefab using Guid(f925c13c4b35d8f4b99cc79a00aa9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d1825a5a9394066f4b011e84fd83598') in 0.001294 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000992 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.636 seconds
+Domain Reload Profiling:
+	ReloadAssembly (636ms)
+		BeginReloadAssembly (93ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (496ms)
+			LoadAssemblies (62ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (161ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (159ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (31ms)
+				ProcessInitializeOnLoadAttributes (114ms)
 				ProcessInitializeOnLoadMethodAttributes (4ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
@@ -576,12 +870,12 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1030 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 70.0 MB.
-System memory in use after: 70.0 MB.
+Unloading 1036 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.8 MB.
+System memory in use after: 97.4 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1593.
-Total: 1.397100 ms (FindLiveObjects: 0.085300 ms CreateObjectMapping: 0.026600 ms MarkObjects: 1.246900 ms  DeleteObjects: 0.037400 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1667.
+Total: 1.613700 ms (FindLiveObjects: 0.095200 ms CreateObjectMapping: 0.027300 ms MarkObjects: 1.288600 ms  DeleteObjects: 0.202000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -593,4 +887,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
