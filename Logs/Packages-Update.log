@@ -52,3 +52,11 @@ Update Mode: updateDependencies
 
 The following packages were updated:
   com.unity.probuilder from version 4.5.2 to 5.0.3
+
+=== Wed Mar 16 17:24:50 2022
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.postprocessing@3.0.3
