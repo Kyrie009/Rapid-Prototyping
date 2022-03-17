@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Prototype2
 {
-    public class GameBehaviour : MonoBehaviour
+    public class UIManager : GameBehaviour<UIManager>
     {
         // Start is called before the first frame update
         void Start()

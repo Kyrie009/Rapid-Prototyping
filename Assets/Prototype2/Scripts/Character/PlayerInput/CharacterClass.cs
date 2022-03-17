@@ -1,11 +1,13 @@
+// Amplify Animation Pack - Third-Person Character Controller
+// Copyright (c) Amplify Creations, Lda <info@amplify.pt>
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-#if CINEMACHINE_PRESENT
 using Cinemachine;
-#endif
+
 
 
 namespace Prototype2
@@ -162,14 +164,14 @@ namespace Prototype2
 	public class CharacterClass : MonoBehaviour
 	{
 		// components
-#if CINEMACHINE_PRESENT
+
 		[SerializeField]
 		private CinemachineFreeLook followCam;
 		private CinemachineCameraOffset followCamOffset;
 		private CinemachineBasicMultiChannelPerlin[] cameraNoises;
 		[SerializeField]
 		private CinemachineFreeLook lockCam;
-#endif
+
 		public CharacterUIBehavior uiManager;
 		[HideInInspector]
 		public CharacterAnimatorBehavior animBeh;
@@ -329,7 +331,7 @@ namespace Prototype2
 			barHangPosHelper = transf.Find( "Mesh/BarHangPosHelper" );
 
 			// create camera noises array
-#if CINEMACHINE_PRESENT
+
 			followCamOffset = followCam.GetComponent<CinemachineCameraOffset>();
 			cameraNoises = new CinemachineBasicMultiChannelPerlin[ 3 ]
 			{
@@ -337,9 +339,8 @@ namespace Prototype2
 			followCam.GetRig(1).GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>(),
 			followCam.GetRig(2).GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>()
 			};
-#else
-			DebugCinemachineError();
-#endif
+
+
 
 		}
 
@@ -415,15 +416,15 @@ namespace Prototype2
 				Time.timeScale = ( Time.timeScale == 1f ) ? 0.2f : 1f;
 			}
 
-			// teleport to some place
+			// teleport to specified location
 			if( Input.GetKeyDown( KeyCode.P ) )
 			{
 				if( SceneManager.GetActiveScene().name == "DemoScene" )
 				{
 					if( currState is GroundedState )
 					{
-						transform.rotation = Quaternion.Euler( 0f , 90f , 0f ); // player is upright when teleported
-						transform.position = new Vector3( 86.78f , 2.63f , -3.11f ); // telleport coordinates
+						transform.rotation = Quaternion.Euler( 0f , 90f , 0f );
+						transform.position = new Vector3( 86.78f , 2.63f , -3.11f );
 					}
 				}
 			}
@@ -435,13 +436,10 @@ namespace Prototype2
 
 		private void UpdateCamera()
 		{
-#if CINEMACHINE_PRESENT
+
 			followCam.m_YAxis.m_InvertInput = !isYInverted;
 			followCamOffset.m_Offset = Vector3.Lerp( followCamOffset.m_Offset , cameraTargetOffset , 0.1f );
-#else
-			DebugCinemachineError();
-#endif
-			headMarker.localPosition = Vector3.Lerp( headMarker.localPosition , targetHeadMarkerPos , 0.1f );
+
 		}
 
 
@@ -765,14 +763,12 @@ namespace Prototype2
 			{
 				if( isLocked )
 				{
-#if CINEMACHINE_PRESENT
+
 					followCam.m_XAxis.Value = Mathf.Abs( transf.eulerAngles.y ) - startRotationY;
 					followCam.m_YAxis.Value = 0.6f;
 					followCam.Priority = 1;
 					lockCam.Priority = 0;
-#else
-					DebugCinemachineError();
-#endif
+
 					isLocked = false;
 					lockOnTarget = null;
 
@@ -795,13 +791,11 @@ namespace Prototype2
 				if( lockOnTarget != null )
 				{
 					isLocked = true;
-#if CINEMACHINE_PRESENT
+
 					lockCam.LookAt = lockOnTarget;
 					followCam.Priority = 0;
 					lockCam.Priority = 1;
-#else
-					DebugCinemachineError();
-#endif
+
 				
 				ChangeLocomotionType( CharacterLocomotionTypes.strafing );
 
@@ -816,38 +810,31 @@ namespace Prototype2
 
 		public Transform GetFollowCamTransform()
 		{
-#if CINEMACHINE_PRESENT
+
 			return followCam.transform;
-#else
-			DebugCinemachineError();
-			return null;
-#endif
+
 		}
 
 
 		public void SetCameraShakeAmplitude( float _valueToSet )
 		{
-#if CINEMACHINE_PRESENT
+
 			for( int i = 0 ; i < cameraNoises.Length ; i++ )
 			{
 				cameraNoises[ i ].m_AmplitudeGain = _valueToSet;
 			}
-#else
-			DebugCinemachineError();
-#endif
+
+
 
 		}
 
 		public void SetCameraShakeFrequency( float _valueToSet )
 		{
-#if CINEMACHINE_PRESENT
+
 			for( int i = 0 ; i < cameraNoises.Length ; i++ )
 			{
 				cameraNoises[ i ].m_FrequencyGain = _valueToSet;
 			}
-#else
-			DebugCinemachineError();
-#endif
 		}
 
 		public void CameraShakeEvent_Start( float _time , float _amplitude , float _frequency ) 
@@ -873,11 +860,6 @@ namespace Prototype2
 			Gizmos.DrawWireSphere( transform.position - Vector3.up * 0.6f , 0.4f );
 		}
 
-		public void DebugCinemachineError()
-		{
-			Debug.LogError( "Cinemachine not installed! Please install the Cinemachine package for optimal usage." );
-
-		}
 
 #endregion
 	

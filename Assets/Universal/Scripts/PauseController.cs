@@ -30,3 +30,4 @@ public class PauseController : MonoBehaviour
         Time.timeScale = paused ? 0 : 1; //an if and else statement in 1. where "?" is the if and ":" is the els
     }
 }
+

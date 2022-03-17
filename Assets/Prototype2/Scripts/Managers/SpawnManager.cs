@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Prototype2
 {
-    public class UIManager : MonoBehaviour
+    public class SpawnManager : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
@@ -18,6 +18,5 @@ namespace Prototype2
 
         }
     }
-
 }
 

@@ -1,7 +1,4 @@
-﻿// Amplify Animation Pack - Third-Person Character Controller
-// Copyright (c) Amplify Creations, Lda <info@amplify.pt>
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 
@@ -16,6 +13,11 @@ namespace Prototype2
 		public void DisableCursor()
 		{
 			Cursor.lockState = CursorLockMode.Locked;
+		}
+
+		public void EnableCursor()
+		{
+			Cursor.lockState = CursorLockMode.Confined;
 		}
 
 		public void InteractionText_Enable( string _textToShow )
