@@ -19,6 +19,7 @@ namespace Prototype2
         public NavMeshAgent agent;
         public Transform player;
         public LayerMask whatIsGround, whatIsPlayer;
+        private bool destinationTimeOut = false;
       
         //Patrolling
         public Vector3 walkPoint;
@@ -26,7 +27,7 @@ namespace Prototype2
         public float walkPointRange = 30f;
 
         //Attacking
-        public float timeBetweenAttacks = 0.8f;
+        public float timeBetweenAttacks = 1.6f;
         bool alreadyAttacked;
         int attackCombo;
 
@@ -41,7 +42,7 @@ namespace Prototype2
         private void Awake()
         {
             anim = GetComponent<Animator>();
-            player = GameObject.Find("Character").transform;
+            player = GameObject.Find("P05_Aki_N").transform;
             agent = GetComponent<NavMeshAgent>();
             transf = transform;
             hitbox = transf.Find("Hitbox").gameObject;
@@ -61,7 +62,6 @@ namespace Prototype2
             if (!playerInSightRange && !playerInAttackRange) Patrolling();
             if (playerInSightRange && !playerInAttackRange) ChasePlayer();
             if (playerInSightRange && playerInAttackRange) AttackPlayer();
-            
         }
 
         public void Setup()
@@ -86,8 +86,17 @@ namespace Prototype2
 
             Vector3 distanceToWalkPoint = transform.position - walkPoint;
             //Walkpoint reached
-            if (distanceToWalkPoint.magnitude < 1f)
+            if (distanceToWalkPoint.magnitude < 1f || destinationTimeOut == true)
+            {
                 walkPointSet = false;
+                StartCoroutine(DestinationTimeOut());              
+            }               
+        }
+        //Time before ai changes direction
+        IEnumerator DestinationTimeOut()
+        {
+            yield return new WaitForSeconds(5f);
+            destinationTimeOut = false;
         }
 
         private void SearchWalkPoint()
@@ -102,8 +111,11 @@ namespace Prototype2
         }
         private void ChasePlayer()
         {
-            anim.SetBool("canRun", true);
-            agent.SetDestination(player.position);
+            if (!playerInAttackRange)
+            {
+                anim.SetBool("canRun", true);
+                agent.SetDestination(player.position);
+            }          
         }
         private void AttackPlayer()
         {

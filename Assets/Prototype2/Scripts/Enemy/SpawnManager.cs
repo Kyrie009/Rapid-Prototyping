@@ -10,7 +10,7 @@ namespace Prototype2
         public int enemyCount;
         public int waveNumber = 10; //number of enemies spawn according to the wave number
 
-        public GameObject[] enemyPrefab;
+        public GameObject enemyPrefab;
 
         
         void Start()
@@ -50,7 +50,7 @@ namespace Prototype2
             //spawn enemies
             for (int i = 0; i<_enemiesToSpawn; i++)
             {
-                //Instantiate(enemyPrefab[], GenerateSpawnPosition(), enemyPrefab[].transform.rotation);
+                Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
             }
         }
 
