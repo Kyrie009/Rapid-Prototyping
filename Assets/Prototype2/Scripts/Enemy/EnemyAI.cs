@@ -9,9 +9,10 @@ namespace Prototype2
     {
         //Stats
         public EnemyData enemyData;
-        string enemyName;
-        int health;
-        int attack;
+        public string enemyName;
+        public int health;
+        public int attack;
+        public int exp;
         //Components
         public Transform transf;
         public GameObject hitbox;
@@ -37,68 +38,95 @@ namespace Prototype2
 
         //Animation
         public Animator anim;
+        //debug
+        bool isRewarded = false;
         
-
         private void Awake()
         {
+            //get references
             anim = GetComponent<Animator>();
             player = GameObject.Find("P05_Aki_N").transform;
             agent = GetComponent<NavMeshAgent>();
             transf = transform;
-            hitbox = transf.Find("Hitbox").gameObject;
-        }
-
-        void Start()
-        {
+            hitbox = transf.Find("EnemyHitbox").gameObject;
+            //Startup
             Setup();
         }
 
         private void Update()
         {
-            //Check for sight and attack range
-            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-            playerInAttackRange = Physics.CheckSphere(transform.position, attackrange, whatIsPlayer);
+            if (!IsDead())
+            {
+                //Check for sight and attack range
+                playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+                playerInAttackRange = Physics.CheckSphere(transform.position, attackrange, whatIsPlayer);
 
-            if (!playerInSightRange && !playerInAttackRange) Patrolling();
-            if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-            if (playerInSightRange && playerInAttackRange) AttackPlayer();
+                if (!playerInSightRange && !playerInAttackRange) Patrolling();
+                if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+                if (playerInSightRange && playerInAttackRange) AttackPlayer();
+            }
+        
         }
-
+        //Sets up the enemy
         public void Setup()
         {
             enemyName = enemyData.enemyName;
             health = enemyData.health;
             attack = Random.Range(enemyData.attack/2, enemyData.attack);
+            exp = enemyData.exp;
 
             hitbox.SetActive(false);
         }
 
+        //MovementTypes
+        private void ChasePlayer()
+        {
+            if (!playerInAttackRange)
+            {
+                agent.speed = 2.5f;
+                anim.SetFloat("Speed", agent.speed);
+                agent.SetDestination(player.position);
+            }          
+        }
+        private void AttackPlayer()
+        {
+            //Make sure enemy doesn't move
+            agent.speed = 0f;
+            anim.SetFloat("Speed", agent.speed);
+            //face player when attacking
+            transform.LookAt(player);
+            if (!alreadyAttacked)
+            {
+                Attack();
+                alreadyAttacked = true;
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            }
+        }
         private void Patrolling()
         {
             if (!walkPointSet) SearchWalkPoint();
 
             if (walkPointSet)
             {
-                anim.SetBool("canRun", true);
+                agent.speed = 1;
+                anim.SetFloat("Speed", agent.speed);
                 agent.SetDestination(walkPoint);
             }
-                
+
 
             Vector3 distanceToWalkPoint = transform.position - walkPoint;
             //Walkpoint reached
             if (distanceToWalkPoint.magnitude < 1f || destinationTimeOut == true)
             {
                 walkPointSet = false;
-                StartCoroutine(DestinationTimeOut());              
-            }               
+                StartCoroutine(DestinationTimeOut());
+            }
         }
-        //Time before ai changes direction
-        IEnumerator DestinationTimeOut()
+        IEnumerator DestinationTimeOut() //Time before ai changes direction
         {
             yield return new WaitForSeconds(5f);
             destinationTimeOut = false;
         }
-
         private void SearchWalkPoint()
         {
             //Calculate random point in range
@@ -109,73 +137,66 @@ namespace Prototype2
             if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
                 walkPointSet = true;
         }
-        private void ChasePlayer()
-        {
-            if (!playerInAttackRange)
-            {
-                anim.SetBool("canRun", true);
-                agent.SetDestination(player.position);
-            }          
-        }
-        private void AttackPlayer()
-        {
 
-            //Make sure enemy doesn't move
-            anim.SetBool("canRun", false);
-            agent.SetDestination(transform.position);
-            //face player when attacking
-            transform.LookAt(player);
-            if (!alreadyAttacked)
-            {
-                Attack();
-                alreadyAttacked = true;
-                Invoke(nameof(ResetAttack), timeBetweenAttacks);
-            }
-        }
         //AttackCode
         private void Attack()
-        {            
-            if (attackCombo == 0)
-            {
-                anim.SetTrigger("Attack1");
-                attackCombo++;
-            }
-            else
-            {
-                anim.SetTrigger("Attack2");
-                attackCombo = 0;
-            }
+        {
+            attackCombo++;
+            hitbox.SetActive(true);
+            anim.SetTrigger("Attack" + attackCombo);
+            StartCoroutine(HitTimer());
+            if (attackCombo > 1) attackCombo = 0;
+        }
+        IEnumerator HitTimer()
+        {
+            yield return new WaitForSeconds(0.1f);
+            hitbox.SetActive(false);
         }
         private void ResetAttack()
         {
             alreadyAttacked = false;
         }
 
-        //Takes Damage
+        //Takes Hit
         public void Hit(int _dmg)
         {
-            health -= _dmg;
-            StartCoroutine(GotHit());
-            if (IsDead())
+            if (!IsDead())
             {
-                anim.SetBool("isDead", true);
-                //enemydies
-                Destroy(this.gameObject, 4f);               
-            }
+                health -= _dmg;
+                anim.SetTrigger("Hit");
+                if (IsDead())
+                {
+                    Kill();
+                }
+            }       
         }
-        //Hit indicator
-        IEnumerator GotHit()
+
+        private void Kill() //Kill code
         {
-            anim.SetTrigger("Hit");
-            this.GetComponent<SpriteRenderer>().color = Color.red;
-            yield return new WaitForSeconds(0.5f);
-            this.GetComponent<SpriteRenderer>().color = Color.white;
+            anim.SetTrigger("Died");
+            killReward();
+            if (_UI2.charRef.isLocked)
+            {
+                _UI2.charRef.TriggerLockOn();
+            }
+            Destroy(this.gameObject, 4f);
         }
-        //Check if enemy dead
-        public bool IsDead()
+
+        private void killReward()
+        {
+            if (!isRewarded)
+            {
+                _UI2.charStat.RewardExp(exp);
+                isRewarded = true;
+            }
+            
+        }
+
+        public bool IsDead() //Check if enemy dead
         {
             return health <= 0;
         }
+
 
     }
 

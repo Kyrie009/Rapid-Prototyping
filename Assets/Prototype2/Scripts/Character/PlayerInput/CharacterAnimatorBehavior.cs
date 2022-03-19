@@ -10,8 +10,14 @@ namespace Prototype2
 		public Animator anim;
 		private Transform charTransf;
 		private CharacterClass charRef;
-
-		public void Setup( Transform _charTransf )
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+				anim.Rebind(); //debug solution to broken animation loops
+            }
+        }
+        public void Setup( Transform _charTransf )
 		{
 			anim = GetComponent<Animator>();
 			charTransf = _charTransf;

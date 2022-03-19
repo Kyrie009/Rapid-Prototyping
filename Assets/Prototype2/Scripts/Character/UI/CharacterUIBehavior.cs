@@ -5,7 +5,7 @@ using UnityEngine.UI;
 namespace Prototype2
 {
 
-	public class CharacterUIBehavior : MonoBehaviour
+	public class CharacterUIBehavior : GameBehaviour
 	{
 		[SerializeField]
 		private Text interactionText;

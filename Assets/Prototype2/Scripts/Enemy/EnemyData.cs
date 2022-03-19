@@ -11,5 +11,6 @@ namespace Prototype2
         public string enemyName;
         public int health;
         public int attack;
+        public int exp;
     }
 }

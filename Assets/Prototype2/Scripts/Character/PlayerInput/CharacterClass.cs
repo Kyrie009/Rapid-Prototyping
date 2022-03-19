@@ -371,7 +371,7 @@ namespace Prototype2
 		private void Update()
 		{
 			GetInputs();
-			//GetDebugInputs();
+			GetDebugInputs();
 
 			currState.UpdateState();
 			UpdateCamera();
@@ -401,11 +401,12 @@ namespace Prototype2
 			currState.InputDodge( Input.GetKeyDown( KeyCode.Mouse2 ) );
 			currState.InputLockOn( Input.GetKeyDown( KeyCode.Q ) );
 		}
-		/*
+		
 		void GetDebugInputs()
 		{
+			/*
 			// invert camera rotation
-			if( Input.GetKeyDown( KeyCode.I ) )
+			if( Input.GetKeyDown( KeyCode.Y ) )
 			{
 				isYInverted = !isYInverted;
 			}
@@ -419,20 +420,18 @@ namespace Prototype2
 			// teleport to specified location
 			if( Input.GetKeyDown( KeyCode.P ) )
 			{
-				if( SceneManager.GetActiveScene().name == "DemoScene" )
+				if (currState is GroundedState)
 				{
-					if( currState is GroundedState )
-					{
-						transform.rotation = Quaternion.Euler( 0f , 90f , 0f );
-						transform.position = new Vector3( 86.78f , 2.63f , -3.11f );
-					}
+					transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+					transform.position = new Vector3(86.78f, 2.63f, -3.11f);
 				}
+
 			}
 
 			// lock to Walking
 			isLockedToWalking = Input.GetKey( KeyCode.LeftAlt );
-
-		}*/
+			*/
+		}
 
 		private void UpdateCamera()
 		{
@@ -781,7 +780,7 @@ namespace Prototype2
 				Collider[] lockOnColliders = Physics.OverlapSphere( transf.position , lockOnRange );
 				for( int i = 0 ; i < lockOnColliders.Length ; i++ )
 				{
-					if( lockOnColliders[ i ].name.Contains( "EnemyObject" ) )
+					if( lockOnColliders[ i ].name.Contains("EnemyObject"))
 					{
 						lockOnTarget = lockOnColliders[ i ].transform;
 						break;

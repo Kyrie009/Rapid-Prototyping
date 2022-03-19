@@ -24,6 +24,7 @@ namespace Prototype2
 				}
 
 				gameObject.SetActive( false );
+				Destroy(this);
 
 			}
 		}

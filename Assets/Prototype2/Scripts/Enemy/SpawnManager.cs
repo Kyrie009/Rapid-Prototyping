@@ -6,46 +6,51 @@ namespace Prototype2
 {
     public class SpawnManager : GameBehaviour
     {
-        private float spawnRange = 110;
+        private float spawnRange = 2;
         public int enemyCount;
-        public int waveNumber = 10; //number of enemies spawn according to the wave number
+        public int enemies = 5; //number of enemies
+        public Transform[] spawncamp;
 
         public GameObject enemyPrefab;
 
         
         void Start()
         {
-            SpawnEnemyWave(waveNumber);
-
+            Spawnenemies(15);
         }
 
         private void Update()
         {
-            //find all enemies in level
             enemyCount = FindObjectsOfType<EnemyAI>().Length;
-            //if no enemies in level start next wave
-            if (enemyCount <= 5)
+            if (enemyCount < 5)
             {
-                StartCoroutine(SpawnNextWave());
+                SpawnNextWave();
             }
+            //spawn enemies as time passes
+            //Invoke(nameof(SpawnNextWave), 60f);  //put the invoke in an if statement of the game will break.
         }
 
-        IEnumerator SpawnNextWave()
+        public void SpawnNextWave()
         {
-            yield return new WaitForSeconds(10);
-            waveNumber += 10;//increases spawn of the next wave
-            SpawnEnemyWave(waveNumber);
+            enemies += 1;//increases spawn of the next wave
+            if (enemies < 30)//limit to amount of enemies spawned
+            {
+                Spawnenemies(enemies);
+            }
+            
         }
 
         private Vector3 GenerateSpawnPosition()
         {
+            //Find random spawn point
+            Vector3 spawn = spawncamp[Random.Range(0, spawncamp.Length)].position;
             //area where the enemy can spawn 
             float spawnPosX = Random.Range(-spawnRange, spawnRange);
             float spawnPosZ = Random.Range(-spawnRange, spawnRange);
-            Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
+            Vector3 randomPos = new Vector3(spawn.x + spawnPosX, 0, spawn.z + spawnPosZ);
             return randomPos;
         }     
-        public void SpawnEnemyWave(int _enemiesToSpawn)
+        public void Spawnenemies(int _enemiesToSpawn)
         {
             //spawn enemies
             for (int i = 0; i<_enemiesToSpawn; i++)
