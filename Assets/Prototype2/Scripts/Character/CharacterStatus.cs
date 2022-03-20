@@ -15,6 +15,8 @@ namespace Prototype2
         public int maxExp;
         public int exp;
 
+        [SerializeField]
+        private GameObject destructionFXPrefab;
         void Start()
         {
             GetDefaults();
@@ -39,15 +41,11 @@ namespace Prototype2
                 _UI2.UpdatePlayerStatus();
                 if (IsDead())
                 {
-                    Kill();
+                    Instantiate(destructionFXPrefab, transform.position, Quaternion.identity);
+                    gameObject.SetActive(false);
+                    _UI2.GameOver();
                 }
             }
-        }
-
-        private void Kill() //Kill code
-        {
-            //Gameover
-
         }
 
         public bool IsDead() //Check if enemy dead

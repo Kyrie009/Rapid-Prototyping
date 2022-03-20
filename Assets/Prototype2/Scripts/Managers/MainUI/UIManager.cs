@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+//This is essentially the GameManager+UI
 namespace Prototype2
 {
     public class UIManager : GameBehaviour<UIManager>
@@ -13,9 +13,11 @@ namespace Prototype2
         public CharacterStatus charStat;
         public CharacterUIBehavior charUI;
         public DialogueManager dM;
+        public Animator hudAnim;
 
         //UI Objects
         public GameObject pausePanel;
+        public GameObject gameOverPanel;
         bool paused = false;
         //PlayerUI
         public TMP_Text playerName;
@@ -23,9 +25,10 @@ namespace Prototype2
         public Slider healthBar;
         public Slider expBar;
         public TMP_Text expText;
-        bool isDialogueOpen = false;
+        //cache
+        public AudioSource button;
 
-        public void UpdatePlayerStatus()
+        public void UpdatePlayerStatus() //should be better to parse in the stats rather than having the script be dependent on looking it up.
         {
             healthBar.maxValue = charStat.maxHealth;
             healthBar.value = charStat.health;
@@ -38,12 +41,19 @@ namespace Prototype2
         void Start()
         {
             //Get references
+            hudAnim = GetComponent<Animator>();
             charStat = FindObjectOfType<CharacterStatus>();
             charRef = FindObjectOfType<CharacterClass>();
             charUI = FindObjectOfType<CharacterUIBehavior>();
+            dM = FindObjectOfType<DialogueManager>();
+
+            //Find UI elements
+            pausePanel = GameObject.Find("PausePanel");
+            gameOverPanel = GameObject.Find("GameOverPanel");
 
             paused = false;
             pausePanel.SetActive(false);
+            gameOverPanel.SetActive(false);
             Time.timeScale = 1;
 
         }
@@ -55,25 +65,29 @@ namespace Prototype2
                 Pause();
             }
         }
-
+        //States
         public void Pause()
         {
+            button.Play();
             PauseScene();
             pausePanel.SetActive(paused);
         }
 
-        public void DialoguePause()
+        public void GameOver()
         {
-            isDialogueOpen = !isDialogueOpen;
-            PauseScene();
+            gameOverPanel.SetActive(true);
+            hudAnim.SetTrigger("GameOver");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
+
 
         private void PauseScene()
         {
             paused = !paused;
             if (paused == true)
             {
-                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.lockState = CursorLockMode.None;
             }
             else
             {

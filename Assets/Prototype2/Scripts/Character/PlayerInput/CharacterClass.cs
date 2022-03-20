@@ -314,6 +314,9 @@ namespace Prototype2
 		public Transform hangPosHelper { get; private set; }
 		public Transform barHangPosHelper { get; private set; }
 
+		//Confinement
+		public bool inputOn = true;
+
 		private void Awake()
 		{
 			// get references
@@ -370,8 +373,12 @@ namespace Prototype2
 
 		private void Update()
 		{
-			GetInputs();
-			GetDebugInputs();
+            if (inputOn)
+            {
+				GetInputs();
+				GetDebugInputs();
+			}
+
 
 			currState.UpdateState();
 			UpdateCamera();
@@ -441,7 +448,10 @@ namespace Prototype2
 
 		}
 
-
+		public void PauseCharacterInput()
+        {
+			inputOn = !inputOn;
+		}
 
 		public void CheckIsGrounded()
 		{

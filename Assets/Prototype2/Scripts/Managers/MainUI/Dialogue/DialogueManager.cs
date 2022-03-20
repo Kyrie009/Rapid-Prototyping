@@ -35,9 +35,10 @@ namespace Prototype2
         //Starts the Dialogue
         public void StartDialogue(Dialogue dialogue)
         {
-            _UI2.DialoguePause(); //stops everything when reading dialogue
+            _UI2.charRef.PauseCharacterInput(); //stops playermovement when reading dialogue
+            _UI2.charUI.InteractionText_Disable();
             dialogueActive = true;
-            animator.SetBool("active", true);
+            animator.SetBool("isActive", true);
             nameText.text = dialogue.name;
             //Clears dialogue from the previous conversation
             sentences.Clear();
@@ -52,7 +53,7 @@ namespace Prototype2
         //display next sentence in queue
         public void DisplayNextSentence()
         {
-            animator.SetTrigger("press");
+            animator.SetTrigger("Press");
             //Ends dialogue when no sentences left in queue
             if (sentences.Count == 0)
             {
@@ -78,11 +79,15 @@ namespace Prototype2
         //Closes dialogue
         void EndDialogue()
         {
-            _UI2.DialoguePause();
+            animator.SetBool("isActive", false);
             dialogueActive = false;
-            animator.SetBool("active", false);
+            _UI2.charRef.PauseCharacterInput();
         }
 
+        public bool DialogueActive()
+        {
+            return dialogueActive;
+        }
     }
 
 }

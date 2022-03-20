@@ -6,12 +6,16 @@ namespace Prototype2
 {
     public class DialogueTrigger : GameBehaviour
     {
+        [Header("Trigger Conditions")]
         public bool invisible = false;
         public bool triggerOn = false;
         public bool interactNPC = false;
         public bool destroyOnCompletion = false;
+        [Header("Dialogue")]
         public Dialogue dialogue;
-        public AudioSource soundEffect;
+        [Header("Sounds")]
+        public AudioSource[] sound;
+        
 
         private void Start()
         {
@@ -25,39 +29,38 @@ namespace Prototype2
         {
             if (triggerOn && other.CompareTag("Player"))
             {
-              OpenDialogue();
+                sound[1].Play();
+                OpenDialogue();
+               
             }
         }
 
         private void OnTriggerStay(Collider other)
         {
-            if (interactNPC && other.CompareTag("Player"))
+            if (!_UI2.dM.DialogueActive() && interactNPC && other.CompareTag("Player")) //prevent spamming
             {
                 _UI2.charUI.InteractionText_Enable("Press 'E' to Talk");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    sound[0].Play();
                     OpenDialogue();
                 }
             }
         }
-
-        private void OpenDialogue()
-        {
-            TriggerDialogue();
-
-            if (soundEffect != null)
-            {
-                soundEffect.Play();
-            }
-        }
-
         private void OnTriggerExit(Collider other)
         {
+            //disable interaction text
             _UI2.charUI.InteractionText_Disable();
+            //destroy object if bool is checked
             if (destroyOnCompletion)
             {
                 Destroy(this.gameObject);
             }
+        }
+        private void OpenDialogue()
+        {
+            TriggerDialogue();
+
         }
 
         //call function for dialogue
