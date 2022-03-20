@@ -15,13 +15,28 @@ namespace Prototype2
         public Dialogue dialogue;
         [Header("Sounds")]
         public AudioSource[] sound;
+        //cache
+        bool canInteract = false;
         
 
         private void Start()
         {
-            if (invisible)
+            if (invisible) //trigger object invisble when game starts
             {
                 GetComponent<SpriteRenderer>().enabled = false;
+            }
+        }
+        private void Update()
+        {
+            if (canInteract) //This is confined in update so that the keypress registers properly. may need to improve code later.
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("buttonpressed");
+                    sound[0].Play();
+                    TriggerDialogue();
+
+                }
             }
         }
         //Use trigger to proc dialogue
@@ -30,21 +45,21 @@ namespace Prototype2
             if (triggerOn && other.CompareTag("Player"))
             {
                 sound[1].Play();
-                OpenDialogue();
-               
+                TriggerDialogue();           
             }
         }
 
         private void OnTriggerStay(Collider other)
         {
-            if (!_UI2.dM.DialogueActive() && interactNPC && other.CompareTag("Player")) //prevent spamming
+            //checks if player can interact with object
+            if (!_UI2.dM.IsDialogueActive() && interactNPC && other.CompareTag("Player")) //prevent spamming
             {
-                _UI2.charUI.InteractionText_Enable("Press 'E' to Talk");
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    sound[0].Play();
-                    OpenDialogue();
-                }
+                canInteract = true;
+                _UI2.charUI.InteractionText_Enable("Press 'E' to Talk");             
+            }
+            else
+            {
+                canInteract = false;
             }
         }
         private void OnTriggerExit(Collider other)
@@ -57,15 +72,11 @@ namespace Prototype2
                 Destroy(this.gameObject);
             }
         }
-        private void OpenDialogue()
-        {
-            TriggerDialogue();
-
-        }
 
         //call function for dialogue
         public void TriggerDialogue()
         {
+            Debug.Log("Dialoguetriggered");
             _UI2.dM.StartDialogue(dialogue);
         }
 

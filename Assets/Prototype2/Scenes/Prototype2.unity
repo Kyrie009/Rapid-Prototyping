@@ -4631,8 +4631,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8138857, y: 1.7840618, z: 1.0589507}
-  m_Center: {x: 0.035990115, y: 0.91331345, z: 0.6459024}
+  m_Size: {x: 1.4267821, y: 1.7840618, z: 1.6062386}
+  m_Center: {x: 0.03312015, y: 0.91331345, z: 0.91953737}
 --- !u!114 &1846069570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10413,6 +10413,7 @@ MonoBehaviour:
   animator: {fileID: 1198484390}
   nameText: {fileID: 6998371325996595359}
   sentenceText: {fileID: 6998371326464432280}
+  dialogueActive: 0
 --- !u!1 &2001496533
 GameObject:
   m_ObjectHideFlags: 0

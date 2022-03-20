@@ -16,7 +16,7 @@ namespace Prototype2
         public TMP_Text nameText;
         public TMP_Text sentenceText;
         //checks
-        bool dialogueActive = false;
+        public bool dialogueActive = false;
 
         void Start()
         {
@@ -35,9 +35,10 @@ namespace Prototype2
         //Starts the Dialogue
         public void StartDialogue(Dialogue dialogue)
         {
-            _UI2.charRef.PauseCharacterInput(); //stops playermovement when reading dialogue
-            _UI2.charUI.InteractionText_Disable();
+            Debug.Log("dialogue started");
             dialogueActive = true;
+            _UI2.charRef.PauseCharacterInput(); //stops playermovement when reading dialogue
+            _UI2.charUI.InteractionText_Disable();           
             animator.SetBool("isActive", true);
             nameText.text = dialogue.name;
             //Clears dialogue from the previous conversation
@@ -48,7 +49,7 @@ namespace Prototype2
                 sentences.Enqueue(sentence);
             }
             //Display First sentence
-            DisplayNextSentence();
+            DisplayNextSentence(); Debug.Log("nextsentence displayed");
         }
         //display next sentence in queue
         public void DisplayNextSentence()
@@ -84,10 +85,11 @@ namespace Prototype2
             _UI2.charRef.PauseCharacterInput();
         }
 
-        public bool DialogueActive()
+        public bool IsDialogueActive()
         {
             return dialogueActive;
         }
+
     }
 
 }
