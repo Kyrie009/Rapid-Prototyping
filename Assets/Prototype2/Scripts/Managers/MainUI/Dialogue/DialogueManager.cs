@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 namespace Prototype2
@@ -35,7 +34,6 @@ namespace Prototype2
         //Starts the Dialogue
         public void StartDialogue(Dialogue dialogue)
         {
-            Debug.Log("dialogue started");
             dialogueActive = true;
             _UI2.charRef.PauseCharacterInput(); //stops playermovement when reading dialogue
             _UI2.charUI.InteractionText_Disable();           
@@ -49,7 +47,7 @@ namespace Prototype2
                 sentences.Enqueue(sentence);
             }
             //Display First sentence
-            DisplayNextSentence(); Debug.Log("nextsentence displayed");
+            DisplayNextSentence();
         }
         //display next sentence in queue
         public void DisplayNextSentence()

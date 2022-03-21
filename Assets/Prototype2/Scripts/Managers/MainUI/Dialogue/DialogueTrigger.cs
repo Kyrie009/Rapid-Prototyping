@@ -32,10 +32,8 @@ namespace Prototype2
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Debug.Log("buttonpressed");
                     sound[0].Play();
                     TriggerDialogue();
-
                 }
             }
         }
@@ -64,9 +62,10 @@ namespace Prototype2
         }
         private void OnTriggerExit(Collider other)
         {
-            //disable interaction text
+            //disable and exit interaction
+            canInteract = false;
             _UI2.charUI.InteractionText_Disable();
-            //destroy object if bool is checked
+            //destroy trigger if bool is checked
             if (destroyOnCompletion)
             {
                 Destroy(this.gameObject);
@@ -76,7 +75,6 @@ namespace Prototype2
         //call function for dialogue
         public void TriggerDialogue()
         {
-            Debug.Log("Dialoguetriggered");
             _UI2.dM.StartDialogue(dialogue);
         }
 
