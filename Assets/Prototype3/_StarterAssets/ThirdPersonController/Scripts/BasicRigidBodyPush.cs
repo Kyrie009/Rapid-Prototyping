@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//pushes rigid body objects when collide with player
 public class BasicRigidBodyPush : MonoBehaviour
 {
 	public LayerMask pushLayers;
