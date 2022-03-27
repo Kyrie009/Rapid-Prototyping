@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace StarterAssets
+namespace Prototype3
 {
     public class MovementTypes : MonoBehaviour
     {

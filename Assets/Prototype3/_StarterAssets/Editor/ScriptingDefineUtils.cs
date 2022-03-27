@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace StarterAssets
+namespace Prototype3
 {
     public static class ScriptingDefineUtils
     {

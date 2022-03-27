@@ -7,7 +7,7 @@ using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using PackageInfo = UnityEditor.PackageManager.PackageInfo;
 
-namespace StarterAssets
+namespace Prototype3
 {
     public static class PackageChecker
     {
