@@ -7,6 +7,7 @@ namespace Prototype3
     public class GrapplingHook : MonoBehaviour
     {
         [SerializeField] private LineRenderer lineRenderer;
+        [SerializeField] private ThirdPersonController movementScript;
         [SerializeField] private CharacterController controller;
         [SerializeField] private Transform playerbody;
         [SerializeField] private Transform grapplingHook;
@@ -16,8 +17,8 @@ namespace Prototype3
         [SerializeField] private LayerMask grappleLayer;
         [SerializeField] private float maxGrappleDistance;
         [SerializeField] private float hookSpeed;
-        [SerializeField] private float grappleSpeed;
         [SerializeField] private Vector3 offset;
+        public Animator anim;
 
         private bool isShooting, isGrappling;
         private Vector3 hookPoint;
@@ -30,34 +31,18 @@ namespace Prototype3
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            ShootHook(); //hook input
+
+            if (isGrappling) //grapples player
             {
-                ShootHook();
+                HandleGrapple();
             }
 
             if (grapplingHook.parent == handpos)
             {
                 grapplingHook.localPosition = grapplingHookInitialPoint.localPosition;
                 grapplingHook.localRotation = grapplingHookInitialPoint.localRotation;
-            }
-
-            if (isGrappling) //grapples player
-            {
-                grapplingHook.position = Vector3.Lerp(grapplingHook.position, hookPoint, hookSpeed * Time.deltaTime); //shoots the hook
-                if (Vector3.Distance(grapplingHook.position, hookPoint) < 0.5f) //checks if hook hits the hook point
-                {
-                    controller.enabled = false; // disable controller to disable gravity
-                    playerbody.position = Vector3.Lerp(playerbody.position, hookPoint - offset, grappleSpeed * Time.deltaTime); //start moving player to position with lerp instead on instant teleport.
-                    if (Vector3.Distance(playerbody.position, hookPoint - offset) < 0.5f) //check if player reack hook point, then drop player
-                    {
-                        controller.enabled = true;
-                        isGrappling = false;
-                        grapplingHook.SetParent(handpos);
-                        lineRenderer.enabled = false;
-                    }
-                }
-
-            }
+            }         
         }
 
         private void LateUpdate()
@@ -66,29 +51,81 @@ namespace Prototype3
             {
                 lineRenderer.SetPosition(0, grapplingHookEndPoint.position);
                 lineRenderer.SetPosition(1, grapplingHookInitialPoint.position);
-
             }
         }
 
-        void ShootHook()
+        public void ShootHook()
         {
-            if (isShooting || isGrappling) return; //check if already shooting the grappling, if so don't do it
-
-            isShooting = true; // if we arent shooting then shoot
-            RaycastHit hit; //shoot a ray at whatever you want to graple at
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); // need to convert this to third person
-            if (Physics.Raycast(ray, out hit, maxGrappleDistance, grappleLayer))
+            if (CheckInputDownHookshot()) //hookshot input
             {
-                hookPoint = hit.point; // if ray hits what we want then set the hook point to that point
-                isGrappling = true; //start grappling to that point
-                grapplingHook.parent = null;
-                grapplingHook.LookAt(hookPoint); // looks at the hook point
-                lineRenderer.enabled = true; //draws hook line
+                if (isShooting || isGrappling) return; //check if already shooting the grappling, if so don't do it
 
+                isShooting = true; // if we arent shooting then shoot
+                //shoot raycast to where you are looking at
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, maxGrappleDistance, grappleLayer))
+                {
+                    //Hit something
+                    movementScript.GetHookState();
+                    hookPoint = hit.point;
+                    isGrappling = true; //start grappling to that point
+                    grapplingHook.parent = null; // removes hook from parent
+                    grapplingHook.LookAt(hookPoint); // looks at the hook point
+                    playerbody.LookAt(hookPoint);
+                    lineRenderer.enabled = true; //draws hook line                   
+                }
+                isShooting = false;
             }
-            isShooting = false;
-
         }
+
+        private void HandleGrapple()
+        {
+            //These variables are used to calculate how the caracter is grappled
+            Vector3 hookshotDir = (hookPoint - transform.position).normalized;
+            float minGrappleSpeed = 10f;
+            float maxGrappleSpeed = 40f;
+            float hookshotSpeed = Mathf.Clamp(Vector3.Distance(transform.position, hookPoint), minGrappleSpeed, maxGrappleSpeed);
+            float SpeedMultiplier = 1f;
+
+            grapplingHook.position = Vector3.Lerp(grapplingHook.position, hookPoint, hookSpeed * Time.deltaTime); //shoots the hook
+            if (Vector3.Distance(grapplingHook.position, hookPoint) < 0.5f) //checks if hook hits the hook point
+            {
+                // Grapples the player via move function                                                                		
+                controller.Move(hookshotDir * hookshotSpeed * SpeedMultiplier * Time.deltaTime);
+                float hookShotDistance = 1f;
+                if (Vector3.Distance(playerbody.transform.position, hookPoint - offset) < hookShotDistance) //Check if player has reached Hookshot position
+                {
+                    ResetHook();
+                }
+                //Cancel Hookshot during grapple
+                if (CheckInputDownHookshot())
+                {
+                    ResetHook();
+                }
+                // Cancel Hookshot with jump (its not an actual jump but emulates the feel of jumping out of the hook)
+                if (movementScript.CheckInputJump())
+                {
+                    //float momentumSpeedBoost = 7f;
+                    //characterVelocityMomentum = hookshotDir * hookshotSpeed * momentumSpeedBoost;
+                    ResetHook();
+                }
+            }          
+        }
+
+        //Resets the hook and returns player to normal movement state
+        public void ResetHook()
+        {
+            movementScript.ReturnToNormalState();
+            isGrappling = false;
+            grapplingHook.SetParent(handpos); //reparents the hook to the hand
+            lineRenderer.enabled = false;
+        }
+        private bool CheckInputDownHookshot()
+        {
+            return Input.GetMouseButtonDown(0);
+        }
+
     }
 
 }

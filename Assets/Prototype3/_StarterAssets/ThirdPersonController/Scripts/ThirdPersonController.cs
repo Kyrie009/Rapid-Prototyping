@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 
 namespace Prototype3
 {
+	enum State { Normal, GrapplingState }
+
 	[RequireComponent(typeof(CharacterController))]
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 	[RequireComponent(typeof(PlayerInput))]
@@ -68,7 +70,7 @@ namespace Prototype3
 		private float _animationBlend;
 		private float _targetRotation = 0.0f;
 		private float _rotationVelocity;
-		private float _verticalVelocity;
+		public float _verticalVelocity;
 		private float _terminalVelocity = 53.0f;
 
 		// timeout deltatime
@@ -91,6 +93,9 @@ namespace Prototype3
 
 		private bool _hasAnimator;
 
+		//grapplehook stuff
+		private State state;
+
 		private void Awake()
 		{
 			// get a reference to our main camera
@@ -98,6 +103,7 @@ namespace Prototype3
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
+			state = State.Normal;
 		}
 
 		private void Start()
@@ -117,9 +123,20 @@ namespace Prototype3
 		{
 			_hasAnimator = TryGetComponent(out _animator);
 			
-			JumpAndGravity();
-			GroundedCheck();
-			Move();
+			switch (state)
+            {
+				default:
+				case State.Normal:
+					JumpAndGravity();
+					GroundedCheck();
+					Move();
+					break;
+				case State.GrapplingState:
+					JumpAndGravity();
+					GroundedCheck();
+					break;
+			}
+
 		}
 
 		private void LateUpdate()
@@ -212,9 +229,9 @@ namespace Prototype3
 				// rotate to face input direction relative to camera position
 				transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
 			}
-
-			Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward; 
-
+			// Player Direction
+			Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
+			
 			// move the player
 			_controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
@@ -227,7 +244,7 @@ namespace Prototype3
 		}
 
 		private void JumpAndGravity()
-		{
+		{			
 			if (Grounded)
 			{
 				// reset the fall timeout timer
@@ -247,7 +264,7 @@ namespace Prototype3
 				}
 
 				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+				if (CheckInputJump() && _jumpTimeoutDelta <= 0.0f)
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
@@ -288,11 +305,32 @@ namespace Prototype3
 				_input.jump = false;
 			}
 
-			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
+			// Apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
 			if (_verticalVelocity < _terminalVelocity)
 			{
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
+		}
+		//resets the gravity
+		public void ResetGravityEffect()
+		{
+			_verticalVelocity = 0f;
+		}
+
+		public void GetHookState()
+        {
+			state = State.GrapplingState;
+        }
+
+        public void ReturnToNormalState()
+        {
+            state = State.Normal;
+            ResetGravityEffect();
+        }
+
+		public bool CheckInputJump()
+		{
+			return _input.jump;
 		}
 
 		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
