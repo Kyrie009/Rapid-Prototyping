@@ -23,7 +23,7 @@ namespace Prototype3
 
         private void OnTriggerEnter(Collider other)
         {
-            _UI3.ShowHelperText("Press E to Press Button");
+            _UI3.charUI.InteractionText_Enable("Press E to Press Button");
         }
 
         private void OnTriggerStay(Collider other)
@@ -37,7 +37,7 @@ namespace Prototype3
 
         private void OnTriggerExit(Collider other)
         {
-            _UI3.ShowHelperText("");
+            _UI3.charUI.InteractionText_Disable();
         }
 
         public void RotateAllRelatedObjects()

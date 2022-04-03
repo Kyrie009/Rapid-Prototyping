@@ -89,7 +89,7 @@ namespace Prototype3
             if (Vector3.Distance(grapplingHook.position, hookPoint) < 0.5f) //checks if hook hits the hook point
             {
                 //player goes into hooked movement
-                movementScript.GetHookState(); 
+                movementScript.GetMovementSwitch(); 
                 // looks at the hook point
                 grapplingHook.LookAt(hookPoint); 
                 playerbody.LookAt(hookPoint);

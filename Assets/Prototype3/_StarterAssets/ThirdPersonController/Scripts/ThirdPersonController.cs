@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 
 namespace Prototype3
 {
-	enum State { Normal, GrapplingState }
+	enum State { Normal, Interact, Grapple }
 
 	[RequireComponent(typeof(CharacterController))]
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -124,21 +124,23 @@ namespace Prototype3
 		private void Update()
 		{
 			_hasAnimator = TryGetComponent(out _animator);
-			
+
 			switch (state)
-            {
+			{
 				default:
 				case State.Normal:
 					JumpAndGravity();
 					GroundedCheck();
 					Move();
 					break;
-				case State.GrapplingState:
+				case State.Interact:
+					GroundedCheck();
+					break;
+				case State.Grapple:
 					JumpAndGravity();
 					GroundedCheck();
 					break;
 			}
-
 		}
 
 		private void LateUpdate()
@@ -313,22 +315,35 @@ namespace Prototype3
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
 		}
+
 		//resets the gravity
 		public void ResetGravityEffect()
 		{
 			_verticalVelocity = 0f;
 		}
 
-		public void GetHookState()
+		public void GetMovementSwitch()
         {
-			state = State.GrapplingState;
+			state = State.Grapple;			
         }
+
+		public void GetInteractSwitch() // temporary solution
+		{
+			state = State.Interact;
+			_animator.Rebind();
+		}
 
         public void ReturnToNormalState()
         {
-            state = State.Normal;
-            ResetGravityEffect();
+			state = State.Normal;
+			ResetGravityEffect();
+			ResetRotation();
         }
+
+		public void ResetRotation()
+        {
+			transform.rotation = Quaternion.Euler(0f, transform.eulerAngles.y, 0f);
+		}
 
 		public bool CheckInputJump()
 		{
