@@ -20,7 +20,7 @@ namespace Prototype3
         [SerializeField] private Vector3 offset;
         public Animator anim;
 
-        private bool isShooting, isGrappling;
+        public bool isShooting, isGrappling;
         private Vector3 hookPoint;
 
         private void Start()
@@ -66,13 +66,10 @@ namespace Prototype3
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, maxGrappleDistance, grappleLayer))
                 {
-                    //Hit something
-                    movementScript.GetHookState();
+                    //Hit something                  
                     hookPoint = hit.point;
                     isGrappling = true; //start grappling to that point
-                    grapplingHook.parent = null; // removes hook from parent
-                    grapplingHook.LookAt(hookPoint); // looks at the hook point
-                    playerbody.LookAt(hookPoint);
+                    grapplingHook.parent = null; // removes hook from parent                   
                     lineRenderer.enabled = true; //draws hook line                   
                 }
                 isShooting = false;
@@ -88,13 +85,19 @@ namespace Prototype3
             float hookshotSpeed = Mathf.Clamp(Vector3.Distance(transform.position, hookPoint), minGrappleSpeed, maxGrappleSpeed);
             float SpeedMultiplier = 1f;
 
-            grapplingHook.position = Vector3.Lerp(grapplingHook.position, hookPoint, hookSpeed * Time.deltaTime); //shoots the hook
+            grapplingHook.position = Vector3.Lerp(grapplingHook.position, hookPoint, hookSpeed * Time.deltaTime); //shoots the hook           
             if (Vector3.Distance(grapplingHook.position, hookPoint) < 0.5f) //checks if hook hits the hook point
             {
+                //player goes into hooked movement
+                movementScript.GetHookState(); 
+                // looks at the hook point
+                grapplingHook.LookAt(hookPoint); 
+                playerbody.LookAt(hookPoint);
                 // Grapples the player via move function                                                                		
                 controller.Move(hookshotDir * hookshotSpeed * SpeedMultiplier * Time.deltaTime);
                 float hookShotDistance = 1f;
-                if (Vector3.Distance(playerbody.transform.position, hookPoint - offset) < hookShotDistance) //Check if player has reached Hookshot position
+                //Check if player has reached Hookshot position
+                if (Vector3.Distance(playerbody.transform.position, hookPoint - offset) < hookShotDistance) 
                 {
                     ResetHook();
                 }
@@ -104,7 +107,7 @@ namespace Prototype3
                     ResetHook();
                 }
                 // Cancel Hookshot with jump (its not an actual jump but emulates the feel of jumping out of the hook)
-                if (movementScript.CheckInputJump())
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
                     //float momentumSpeedBoost = 7f;
                     //characterVelocityMomentum = hookshotDir * hookshotSpeed * momentumSpeedBoost;

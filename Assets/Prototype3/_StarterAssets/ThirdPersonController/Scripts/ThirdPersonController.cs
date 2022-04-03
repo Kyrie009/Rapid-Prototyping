@@ -95,6 +95,7 @@ namespace Prototype3
 
 		//grapplehook stuff
 		private State state;
+		GrapplingHook grapplingScript;
 
 		private void Awake()
 		{
@@ -103,6 +104,7 @@ namespace Prototype3
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
+			grapplingScript = FindObjectOfType<GrapplingHook>();
 			state = State.Normal;
 		}
 
