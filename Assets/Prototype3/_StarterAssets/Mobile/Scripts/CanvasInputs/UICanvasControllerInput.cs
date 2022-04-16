@@ -27,7 +27,12 @@ namespace Prototype3
         {
             starterAssetsInputs.SprintInput(virtualSprintState);
         }
-        
+
+        public void VirtualAimInput(bool virtualAimState)
+        {
+            starterAssetsInputs.AimInput(virtualAimState);
+        }
+
     }
 
 }

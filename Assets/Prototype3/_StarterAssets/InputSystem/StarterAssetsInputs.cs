@@ -12,6 +12,8 @@ namespace Prototype3
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool aim;
+		public bool shoot;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -46,6 +48,15 @@ namespace Prototype3
 			SprintInput(value.isPressed);
 		}
 
+		public void OnAim(InputValue value)
+		{
+			AimInput(value.isPressed);
+		}
+		public void OnShoot(InputValue value)
+		{
+			ShootInput(value.isPressed);
+		}
+
 #else
 	// old input sys if we do decide to have it (most likely wont)...
 #endif
@@ -69,6 +80,14 @@ namespace Prototype3
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+		public void AimInput(bool newAimState)
+		{
+			aim = newAimState;
+		}
+		public void ShootInput(bool newShootState)
+		{
+			shoot = newShootState;
 		}
 
 

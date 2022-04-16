@@ -26,6 +26,7 @@ namespace Prototype3
 		public float RotationSmoothTime = 0.12f;
 		[Tooltip("Acceleration and deceleration")]
 		public float SpeedChangeRate = 10.0f;
+		public float Sensitivity = 1f;
 
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
@@ -92,9 +93,10 @@ namespace Prototype3
 		private const float _threshold = 0.01f;
 
 		private bool _hasAnimator;
-
+		//Shooter stuff
+		private bool _rotateOnMove = true;
 		//grapplehook stuff
-		private State state;
+		[SerializeField] private State state;
 		GrapplingHook grapplingScript;
 
 		private void Awake()
@@ -175,8 +177,8 @@ namespace Prototype3
 			// if there is an input and camera position is not fixed
 			if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
 			{
-				_cinemachineTargetYaw += _input.look.x * Time.deltaTime;
-				_cinemachineTargetPitch += _input.look.y * Time.deltaTime;
+				_cinemachineTargetYaw += _input.look.x * Time.deltaTime * Sensitivity;
+				_cinemachineTargetPitch += _input.look.y * Time.deltaTime * Sensitivity;
 			}
 
 			// clamp our rotations so our values are limited 360 degrees
@@ -230,8 +232,11 @@ namespace Prototype3
 				_targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + _mainCamera.transform.eulerAngles.y;
 				float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
 
-				// rotate to face input direction relative to camera position
-				transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+                if (_rotateOnMove) //if normal movement rotation state then continue as normal
+                {
+					// rotate to face input direction relative to camera position
+					transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+				}
 			}
 			// Player Direction
 			Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
@@ -320,30 +325,7 @@ namespace Prototype3
 		public void ResetGravityEffect()
 		{
 			_verticalVelocity = 0f;
-		}
-
-		public void GetMovementSwitch()
-        {
-			state = State.Grapple;			
-        }
-
-		public void GetInteractSwitch() // temporary solution
-		{
-			state = State.Interact;
-			_animator.Rebind();
-		}
-
-        public void ReturnToNormalState()
-        {
-			state = State.Normal;
-			ResetGravityEffect();
-			ResetRotation();
-        }
-
-		public void ResetRotation()
-        {
-			transform.rotation = Quaternion.Euler(0f, transform.eulerAngles.y, 0f);
-		}
+		}		
 
 		public bool CheckInputJump()
 		{
@@ -356,7 +338,7 @@ namespace Prototype3
 			if (lfAngle > 360f) lfAngle -= 360f;
 			return Mathf.Clamp(lfAngle, lfMin, lfMax);
 		}
-
+		//tools
 		private void OnDrawGizmosSelected()
 		{
 			Color transparentGreen = new Color(0.0f, 1.0f, 0.0f, 0.35f);
@@ -367,6 +349,39 @@ namespace Prototype3
 			
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+		}
+		//Exposed Parameters to update
+		public void SetSensitivity(float _newSensitivity) // camera sensitivty
+        {
+			Sensitivity = _newSensitivity;
+        }
+		public void SetRotateOnMove(bool _newRotateOnMove) // player rotation state
+		{
+			_rotateOnMove = _newRotateOnMove;
+		}
+
+		//movement States
+		public void GetMovementSwitch()
+		{
+			state = State.Grapple;
+		}
+
+		public void GetInteractSwitch() // temporary solution
+		{
+			state = State.Interact;
+			_animator.Rebind();
+		}
+
+		public void ReturnToNormalState()
+		{
+			state = State.Normal;
+			ResetGravityEffect();
+			ResetRotation();
+		}
+
+		public void ResetRotation()
+		{
+			transform.rotation = Quaternion.Euler(0f, transform.eulerAngles.y, 0f);
 		}
 	}
 }
