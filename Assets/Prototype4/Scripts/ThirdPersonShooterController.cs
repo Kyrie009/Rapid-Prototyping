@@ -63,6 +63,26 @@ public class ThirdPersonShooterController : MonoBehaviour
 
             transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f); //rotates the player to target aiming direction
 
+            if (_Inputs.shoot)
+            {
+                /*if (hitTransform != null)
+                {
+                    if (other.GetComponent<EnemyShooter>() != null)
+                    {
+                        //hit target
+                    }
+                    else
+                    {
+                        //hit something else
+                    }
+                    Instantiate(hitVFX, transform.position, Quaternion.identity);
+                }*/
+                Vector3 aimDir = (mouseWorldPosition - firingPoint.position).normalized; //gets aim direction of the firing point instead of player
+                Instantiate(bulletProjectilePrefab, firingPoint.position, Quaternion.LookRotation(aimDir, Vector3.up)); //now we want the full rotation in all angles for th bullet to spawn
+                _Inputs.shoot = false; //prevent from constantly spawning pullets when you only need 1 per click
+                CinemachineShake.Instance.ShakeCamera(0.2f, .1f); //shake camera when shooting
+            }
+
         }
         else //when not aiming
         {
@@ -73,25 +93,7 @@ public class ThirdPersonShooterController : MonoBehaviour
             animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
         }
 
-        if (_Inputs.shoot)
-        {
-            /*if (hitTransform != null)
-            {
-                if (other.GetComponent<EnemyShooter>() != null)
-                {
-                    //hit target
-                }
-                else
-                {
-                    //hit something else
-                }
-                Instantiate(hitVFX, transform.position, Quaternion.identity);
-            }*/
-            Vector3 aimDir = (mouseWorldPosition - firingPoint.position).normalized; //gets aim direction of the firing point instead of player
-            Instantiate(bulletProjectilePrefab, firingPoint.position, Quaternion.LookRotation(aimDir, Vector3.up)); //now we want the full rotation in all angles for th bullet to spawn
-            _Inputs.shoot = false; //prevent from constantly spawning pullets when you only need 1 per click
-            CinemachineShake.Instance.ShakeCamera(0.2f, .1f); //shake camera when shooting
-        }
+        
     }
 }
 

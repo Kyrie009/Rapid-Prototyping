@@ -20,15 +20,16 @@ public class BulletProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<EnemyShooter>() != null)
+        if (other.GetComponent<EnemyShooter>() != null)
         {
             //hit target
         }
         else
         {
-            //hit something else
+            //hit something else          
         }
         //Instantiate(hitVFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
+
     }
 }
