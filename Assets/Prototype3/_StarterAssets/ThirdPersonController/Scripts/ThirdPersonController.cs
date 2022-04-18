@@ -375,6 +375,7 @@ namespace Prototype3
 		public void ReturnToNormalState()
 		{
 			state = State.Normal;
+			_verticalVelocity = -2f;
 			ResetGravityEffect();
 			ResetRotation();
 		}

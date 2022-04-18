@@ -12,4 +12,12 @@ public class Player : GameBehaviour
             _UI3.GameOver();
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Death"))
+        {
+            _UI3.GameOver();
+        }
+    }
 }

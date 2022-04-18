@@ -5,31 +5,36 @@ using UnityEngine;
 public class BulletProjectile : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
+    [SerializeField] private int resonanceLevel = 0;
+    [SerializeField] private int chargeDmgMultiplier = 100;
     //[SerializeField] private Transform hitVFX;
     private Rigidbody bulletRigidbody;
+    private ResonanceInputs resonanceScript;
 
     private void Awake()
     {
         bulletRigidbody = GetComponent<Rigidbody>();
+        resonanceScript = FindObjectOfType<ResonanceInputs>();
     }
 
     private void Start()
     {
         bulletRigidbody.velocity = transform.forward * speed; //bullet movement
+        resonanceLevel = resonanceScript.resonanceLevel;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<EnemyShooter>() != null)
+        if (other.GetComponent<EnemyAI4>() != null)
         {
-            //hit target
+            other.GetComponent<EnemyAI4>().Hit(resonanceLevel * chargeDmgMultiplier);
         }
-        else
+        if (other.GetComponent<MathQuestion>() != null)
         {
-            //hit something else          
+            other.GetComponent<MathQuestion>().EnterAnswer(resonanceLevel); // shoot answer into the math object
         }
         //Instantiate(hitVFX, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-
+        Destroy(gameObject,1f);
     }
+
 }

@@ -8,6 +8,9 @@ public class GameBehaviour : JMC
     protected static Prototype2.UIManager _UI2 { get { return Prototype2.UIManager.INSTANCE; } }
 
     protected static Prototype3.UIManager _UI3 { get { return Prototype3.UIManager.INSTANCE; } }
+    protected static UIManager4 _UI4 { get { return UIManager4.INSTANCE; } }
+    protected static SceneLoader _SL { get { return SceneLoader.INSTANCE; } }
+    protected static TempSave _TS { get { return TempSave.INSTANCE; } }
 }
 
 public class GameBehaviour<T> : GameBehaviour where T : GameBehaviour
