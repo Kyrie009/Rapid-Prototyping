@@ -11,6 +11,7 @@ public class EnemyAI4 : GameBehaviour
     public string enemyName;
     public int health;
     public int attack;
+    public float speed = 5f;
     public int exp;
     //Components
     public Transform transf;
@@ -73,6 +74,7 @@ public class EnemyAI4 : GameBehaviour
         health = enemyData.health;
         attack = Random.Range(enemyData.attack / 2, enemyData.attack);
         exp = enemyData.exp;
+        agent.speed = speed;
 
         hitbox.SetActive(false);
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletProjectile : MonoBehaviour
+public class ResonanceProjectile : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private int resonanceLevel = 0;
