@@ -25,6 +25,7 @@ ScriptedImporter:
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
     vTOnly: 0
+    ignoreMasterTextureLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -79,7 +80,6 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: 
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -103,7 +103,6 @@ ScriptedImporter:
       width: 103
       height: 103
     spriteID: bd6821321ced29441879f022eb118137
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -125,7 +124,6 @@ ScriptedImporter:
       width: 75
       height: 69
     spriteID: dedee42ed4788ab4286b58bbc21d8848
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -147,7 +145,6 @@ ScriptedImporter:
       width: 711
       height: 24
     spriteID: 9cbfeaa3ef40dea46a90a8b96a3c082d
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -169,7 +166,6 @@ ScriptedImporter:
       width: 54
       height: 54
     spriteID: 44333fdc16e75154980a274cd9b003f9
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -191,7 +187,6 @@ ScriptedImporter:
       width: 156
       height: 154
     spriteID: ae1305bb89b5afb4bb0de9ac53606fb7
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -213,7 +208,6 @@ ScriptedImporter:
       width: 146
       height: 84
     spriteID: eaca7e9f038dc3a44be4ab3e7f50b596
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -235,7 +229,6 @@ ScriptedImporter:
       width: 637
       height: 269
     spriteID: 5fe5cc48e52d28b4fac7d28c376dcda6
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -257,7 +250,6 @@ ScriptedImporter:
       width: 97
       height: 117
     spriteID: 51438ef29b5e2e048a79150d8e77ea7b
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -279,7 +271,6 @@ ScriptedImporter:
       width: 156
       height: 154
     spriteID: db4bafce49566884e8171ed0da1a27f6
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -301,7 +292,6 @@ ScriptedImporter:
       width: 932
       height: 288
     spriteID: 18e7b88faa638d24ba9b8606980e3ffa
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -323,7 +313,6 @@ ScriptedImporter:
       width: 166
       height: 94
     spriteID: 62569cfdc6d2d1140a03035b36b42ab1
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -352,16 +341,13 @@ ScriptedImporter:
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  importedTextureWidth: 1024
-  importedTextureHeight: 1024
-  documentSize: {x: 3840, y: 2160}
+  layerMappingOption: 2
+  generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
   skeletonAssetReferenceID: 
   spriteCategoryList:
     categories: []
-  textureActualWidth: 1024
-  textureActualHeight: 1024
   spritePackingTag: 
   resliceFromLayer: 0
   mosaicPSDLayers: []
@@ -373,6 +359,9 @@ ScriptedImporter:
     spriteID: bd6821321ced29441879f022eb118137
     layerID: 211
     mosaicPosition: {x: 109, y: 609}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: IconHeart
     spriteName: IconHeart
     isGroup: 0
@@ -380,6 +369,9 @@ ScriptedImporter:
     spriteID: dedee42ed4788ab4286b58bbc21d8848
     layerID: 196
     mosaicPosition: {x: 944, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: RoundedRectangle
     spriteName: RoundedRectangle
     isGroup: 0
@@ -387,6 +379,9 @@ ScriptedImporter:
     spriteID: 9cbfeaa3ef40dea46a90a8b96a3c082d
     layerID: 195
     mosaicPosition: {x: 4, y: 577}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: IconCoin
     spriteName: IconCoin
     isGroup: 0
@@ -394,6 +389,9 @@ ScriptedImporter:
     spriteID: 44333fdc16e75154980a274cd9b003f9
     layerID: 197
     mosaicPosition: {x: 944, y: 81}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: IconKey
     spriteName: IconKey
     isGroup: 0
@@ -401,6 +399,9 @@ ScriptedImporter:
     spriteID: ae1305bb89b5afb4bb0de9ac53606fb7
     layerID: 215
     mosaicPosition: {x: 649, y: 300}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Triangle
     spriteName: Triangle
     isGroup: 0
@@ -408,6 +409,9 @@ ScriptedImporter:
     spriteID: eaca7e9f038dc3a44be4ab3e7f50b596
     layerID: 221
     mosaicPosition: {x: 649, y: 462}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Fader
     spriteName: Fader
     isGroup: 0
@@ -415,6 +419,9 @@ ScriptedImporter:
     spriteID: 5fe5cc48e52d28b4fac7d28c376dcda6
     layerID: 223
     mosaicPosition: {x: 4, y: 300}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: IconE
     spriteName: IconE
     isGroup: 0
@@ -422,6 +429,9 @@ ScriptedImporter:
     spriteID: 51438ef29b5e2e048a79150d8e77ea7b
     layerID: 222
     mosaicPosition: {x: 4, y: 609}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: IconBlank
     spriteName: IconBlank
     isGroup: 0
@@ -429,6 +439,9 @@ ScriptedImporter:
     spriteID: db4bafce49566884e8171ed0da1a27f6
     layerID: 216
     mosaicPosition: {x: 813, y: 300}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Controls
     spriteName: Controls
     isGroup: 0
@@ -436,6 +449,19 @@ ScriptedImporter:
     spriteID: 18e7b88faa638d24ba9b8606980e3ffa
     layerID: 141
     mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BGReference
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
   - name: PauseOverlay
     spriteName: PauseOverlay
     isGroup: 0
@@ -443,7 +469,11 @@ ScriptedImporter:
     spriteID: 62569cfdc6d2d1140a03035b36b42ab1
     layerID: 167
     mosaicPosition: {x: 813, y: 462}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
   generateGOHierarchy: 0
   textureAssetName: UI (PSB) Texture
   prefabAssetName: UI (PSB) Prefab
