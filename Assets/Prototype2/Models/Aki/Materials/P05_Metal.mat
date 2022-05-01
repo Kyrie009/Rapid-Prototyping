@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: P05_Metal
   m_Shader: {fileID: 4800000, guid: ca035891872022e4f80c952b3916e450, type: 3}
-  m_ShaderKeywords: _EMISSIVE_SIMPLE _OUTLINE_NML
+  m_ShaderKeywords: _OUTLINE_NML
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -127,7 +127,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
     m_Floats:
     - _1st2nd_Shades_Feather: 0.246
     - _1st_ShadeColor_Feather: 0.166
@@ -249,4 +248,3 @@ Material:
     - _Outline_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
     - _RimLightColor: {r: 0.27418736, g: 0.245105, b: 0.33962262, a: 1}
     - _ViewShift: {r: 0, g: 0, b: 0, a: 1}
-  m_BuildTextureStacks: []
