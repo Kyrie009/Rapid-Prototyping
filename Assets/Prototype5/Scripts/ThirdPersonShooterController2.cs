@@ -84,6 +84,23 @@ public class ThirdPersonShooterController2 : MonoBehaviour
             }
 
         }
+        /*
+        else if (_Inputs.shoot) //hip fire requires different movement and camera system and animations for walking backwards, instead make a melee attack instead uwu
+        {
+            rig.weight = 1f;
+            animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f)); //set animation to layer on 2 index and lerp the weight transition so it is not instant
+            Vector3 worldAimTarget = mouseWorldPosition; //world aim target is used to get the hitpoint when aiming
+                                                        //Gets character to look at the hitpoint while standing upright
+            worldAimTarget.y = transform.position.y; //used to get the left and right rotation for the character to face hitpoint without rotating the character up or down.
+            Vector3 aimDirection = (worldAimTarget - transform.position).normalized; // gets the direction player should face when they aim
+            transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f); //rotates the player to target aiming direction
+
+            Vector3 aimDir = (mouseWorldPosition - firingPoint.position).normalized; //gets aim direction of the firing point instead of player
+            Instantiate(bulletProjectilePrefab, firingPoint.position, Quaternion.LookRotation(aimDir, Vector3.up)); //now we want the full rotation in all angles for th bullet to spawn
+            _Inputs.shoot = false; //prevent from constantly spawning pullets when you only need 1 per click
+            CinemachineShake.Instance.ShakeCamera(0.2f, .1f); //shake camera when shooting
+
+        }*/
         else //when not aiming
         {
             rig.weight = 0f;
@@ -91,6 +108,7 @@ public class ThirdPersonShooterController2 : MonoBehaviour
             thirdPersonController.SetSensitivity(normalSensitivity);
             thirdPersonController.SetRotateOnMove(true);
             animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
+
         }
 
 
