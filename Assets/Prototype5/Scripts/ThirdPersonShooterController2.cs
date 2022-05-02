@@ -18,10 +18,15 @@ public class ThirdPersonShooterController2 : MonoBehaviour
     [SerializeField] private GameObject aimRig;
     [SerializeField] private GameObject aimTarget;
     [SerializeField] private Rig rig;
+    //combat
+    public bool canAttack;
+    public float attackSpeed = 0.5f;
 
+    //references
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs _Inputs;
     private Animator animator;
+    private GameObject hitBox;
 
 
     private void Awake()
@@ -32,6 +37,13 @@ public class ThirdPersonShooterController2 : MonoBehaviour
         aimTarget = GameObject.Find("AimTarget");
         aimRig = GameObject.Find("Rig 2");
         rig = aimRig.GetComponent<Rig>();
+        hitBox = transform.Find("PlayerHitBox").gameObject;       
+    }
+
+    private void Start()
+    {
+        hitBox.SetActive(false);
+        canAttack = true;
     }
 
     private void Update()
@@ -47,7 +59,7 @@ public class ThirdPersonShooterController2 : MonoBehaviour
             mouseWorldPosition = raycastHit.point; //the mouse world position is set to the hit point of the raycast
             //hitTransform = raycastHit.transform;
         }
-
+        
         if (_Inputs.aim) //when aiming
         {
             rig.weight = 1f;
@@ -84,8 +96,7 @@ public class ThirdPersonShooterController2 : MonoBehaviour
             }
 
         }
-        /*
-        else if (_Inputs.shoot) //hip fire requires different movement and camera system and animations for walking backwards, instead make a melee attack instead uwu
+        /*else if (_Inputs.shoot) //hip fire requires different movement and camera system and animations for walking backwards, instead make a melee attack instead uwu
         {
             rig.weight = 1f;
             animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f)); //set animation to layer on 2 index and lerp the weight transition so it is not instant
@@ -103,14 +114,36 @@ public class ThirdPersonShooterController2 : MonoBehaviour
         }*/
         else //when not aiming
         {
-            rig.weight = 0f;
-            aimVirtualCamera.gameObject.SetActive(false);
-            thirdPersonController.SetSensitivity(normalSensitivity);
-            thirdPersonController.SetRotateOnMove(true);
-            animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
-
+            DefaultState();
+            if (_Inputs.shoot && !_Inputs.aim && canAttack)
+            {
+                thirdPersonController.GetMovementSwitch();
+                _Inputs.shoot = false;
+                canAttack = false;
+                hitBox.SetActive(true);
+                animator.SetBool("Attacking", true);
+                StartCoroutine(MeleeAttack());
+            }
         }
-
-
     }
+
+    private void DefaultState()
+    {
+        rig.weight = 0f;
+        aimVirtualCamera.gameObject.SetActive(false);
+        thirdPersonController.SetSensitivity(normalSensitivity);
+        thirdPersonController.SetRotateOnMove(true);
+        animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
+    }
+
+    IEnumerator MeleeAttack()
+    {
+        yield return new WaitForSeconds(attackSpeed);
+        hitBox.SetActive(false);
+        canAttack = true;
+        animator.SetBool("Attacking", false);
+        thirdPersonController.ReturnToNormalState();
+    }
+
+
 }

@@ -82,7 +82,7 @@ public class EnemyAI4 : GameBehaviour
     {
         if (!playerInAttackRange)
         {
-            agent.speed = 2.5f;
+            agent.speed = 3.5f;
             anim.SetFloat("Speed", agent.speed);
             agent.SetDestination(player.position);
         }

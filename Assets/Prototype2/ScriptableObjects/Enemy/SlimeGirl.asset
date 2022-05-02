@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: SlimeGirl
   health: 500
-  attack: 200
+  attack: 10
   exp: 13

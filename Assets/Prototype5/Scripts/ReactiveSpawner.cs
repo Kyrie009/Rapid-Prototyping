@@ -5,6 +5,7 @@ using UnityEngine;
 public class ReactiveSpawner : GameBehaviour
 {   
     public int initialEnemyCount;
+    int totalEnemyCount;
     public int enemies = 5; //number of enemies
     public float spawnTime = 5f;
     public float detectionRange;
@@ -29,9 +30,10 @@ public class ReactiveSpawner : GameBehaviour
 
     private void Update()
     {
+        EnemyAI4[] enemyCount = FindObjectsOfType<EnemyAI4>();
         isPlayerInRange = Physics.CheckSphere(transform.position, detectionRange, whatIsPlayer); // check if play in range of spawner
         isPlayerInSpawnArea = Physics.CheckSphere(transform.position, spawnRange, whatIsPlayer); // check if play in range of enemy spawn point
-        if (isPlayerInRange && !isPlayerInSpawnArea)
+        if (isPlayerInRange && !isPlayerInSpawnArea && enemyCount.Length <= 20)
         {
             EnableEnemySpawn();
         }
